@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Cloud Note App</string>
+    <string name="app_description">本应用为学习各个组件使用积累而成的应用</string>
+    
+    <string name="show_message">显示信息</string>
+    <string name="action_settings">设置</string>
+    <string name="edit_message">输入信息</string>
+    <string name="button_send">发送</string>
+    <string name="title_activity_main">标题</string>
+    <string name="title_activity_display_message">我的信息</string>
+    <string name="share_key">分享</string>
+    <string name="default_name">shine</string>
+    <string name="title_activity_receive">ReceiveActivity</string>
+    <string name="android.widget.ShareActionProviderandroid.widget.ShareActionProvider">分享</string>
+    
+    <string name="photointent">Photo Intent</string>
+    <string name="btnIntend">Take (big) Picture</string>
+    <string name="btnIntendS">Take (small) Picture</string>
+    <string name="btnIntendV">Take Video</string>
+    <string name="cannot">Cannot</string>
+    <string name="album_name">CameraSample</string>
+    
+    <string name="contacts">联系人</string>
+    <string name="activity_contacts_list">联系人列表</string>
+    <string name="activity_contact_detail">联系人详情</string>
+    <string name="contacts_list_search_results_title">Contacts List Search for \"%s\"</string>
+    <string name="imageview_description">Contact Thumbnail</string>
+    <string name="address_button_description">View Address</string>
+    <string name="menu_search">搜索</string>
+    <string name="menu_add_contact">添加联系人</string>
+    <string name="menu_edit_contact">编辑联系人</string>
+    <string name="no_contacts">没有任何联系人</string>
+    <string name="no_contact_selected">未选择联系人</string>
+    <string name="search_hint">查找联系人</string>
+
+    <string name="alphabet">ABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+
+    <string name="search_match_other">匹配其它字段</string>
+
+    <string name="no_address">没找到地址</string>
+    <string name="no_intent_found">No application found to handle this action</string>
+    
+    <string name="uihider">UI隐藏</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+	
+    
+    <!-- AddVoicemailActivity -->
+    <string name="voicemail">声音邮件</string>
+    <string name="add_voicemail">Add voicemail</string>
+    <string name="sender_number">Sender phone number</string>
+    <string name="time">Time in DD/MM/YYYY hh:mm</string>
+    <string name="duration">Duration in seconds</string>
+    <string name="mime_type">MIME type</string>
+    <string name="voicemail_store_error">Error in storing voicemail!</string>
+    <string name="send">Send</string>
+    <string name="record_voice">Record voice</string>
+    
+    
+    <!-- Activity titles -->
+    <string name="imageloader">图片加载</string>
+    <string name="ac_name_image_list">Image List Example</string>
+    <string name="ac_name_image_grid">Image Grid Example</string>
+    <string name="ac_name_image_pager">Image Pager Example</string>
+    <string name="ac_name_image_gallery">Image Gallery Example</string>
+    <!-- Labels -->
+    <string name="label_activity_examples">Activity Examples</string>
+    <string name="menu_item_clear_memory_cache">Clear memory cache</string>
+    <string name="menu_item_clear_disc_cache">Clear disc cache</string>
+    <string name="menu_item_pause_on_scroll">Pause on scroll</string>
+    <string name="menu_item_pause_on_fling">Pause on fling</string>
+    <string name="button_image_list">ListView</string>
+    <string name="button_image_grid">GridView</string>
+    <string name="button_image_pager">ViewPager</string>
+    <string name="button_image_gallery">Gallery</string>
+    <!-- Content descriptions -->
+    <string name="descr_image">Image</string>
+    
+    <string name="navigate">菜单导航</string>
+    <string name="dummy_section_text">Section %1d is just a dummy section.</string>
+    <string name="demo_external_activity">Demo External Activity</string>
+    <string name="demo_collection">Demo Collection</string>
+    
+     <string name="drawer">抽屉菜单</string>
+     <string-array name="planets_array">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+    </string-array>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="action_websearch">Web search</string>
+    <string name="app_not_available">Sorry, there\'s no web browser available</string>
+    
+    <string name="newsreader">新闻阅读</string>
+    
+    <string name="networkusage">网络浏览</string>
+     <!--  Menu items -->
+    <string name="settings">设置</string>
+    <string name="refresh">刷新</string>
+
+    <!--  NetworkActivity -->
+    <string name="page_title">Newest StackOverflow questions tagged \'android\'</string>
+    <string name="updated">Last updated:</string>
+    <string name="lost_connection">Lost connection.</string>
+    <string name="wifi_connected">Wi-Fi 已连接.</string>
+    <string name="connection_error">不能加载内存，请检查网络连接.</string>
+    <string name="xml_error">解析XML错误.</string>
+    
+    <string name="fragments">基本框架</string>
+    
+    <string name="qiyi">奇艺视频</string>
+    <string name="category_home">首页</string>
+    <string name="category_channel">分类</string>
+    <string name="category_search">搜索</string>
+    <string name="category_account">我的资料</string>
+    <string name="category_more">更多</string>
+    <string name="search_hit">输入片名、主演或导演</string>
+    <string name="search_text">搜索</string>
+    <string name="hot_search">热门搜索</string>
+    <string name="search_history">搜索历史</string>
+    <string name="clear_search_history">清除</string>
+    <string name="leave_look">离线观看</string>
+    <string name="play_history">播放记录</string>
+    <string name="favorite">收藏夹</string>
+    <string name="my_account">我的帐号</string>
+    <string name="setting">设置</string>
+    <string name="feedback">信息反馈</string>
+    <string name="help">使用帮助</string>
+    <string name="about">更多</string>
+    
+    <string name="bitmapfun">表格图片</string>
+    <string name="clear_cache_menu">清除缓存</string>
+    <string name="clear_cache_complete_toast">缓存已被清除</string>
+    <string name="no_network_connection_toast">未连接到网络</string>
+</resources>
