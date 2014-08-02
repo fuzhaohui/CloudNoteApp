@@ -1,15 +1,15 @@
 apply plugin: 'android'
 
 android {
+    signingConfigs {
+    }
     compileSdkVersion 19
     buildToolsVersion '20.0.0'
-
     defaultConfig {
         applicationId "com.ces.cloudnote.app"
         minSdkVersion 9
         targetSdkVersion 19
     }
-
     buildTypes {
         release {
             runProguard false

@@ -38,7 +38,7 @@ public class HomeActivity extends Activity {
 	String[][] childs = new String[5][10];
 	Gallery mGallery;
 	GalleryAdapter mGalleryAdapter;
-	FlowIndicator mMyView;
+	//FlowIndicator mMyView;
 	Timer mTimer;
 
 	@Override
@@ -57,9 +57,9 @@ public class HomeActivity extends Activity {
 		View header = LayoutInflater.from(this).inflate(R.layout.header_view,
 				null);
 		mGallery = (Gallery) header.findViewById(R.id.home_gallery);
-		mMyView = (FlowIndicator) header.findViewById(R.id.myView);
+		//mMyView = (FlowIndicator) header.findViewById(R.id.myView);
 		mGalleryAdapter = new GalleryAdapter(this);
-		mMyView.setCount(mGalleryAdapter.getCount());
+		//mMyView.setCount(mGalleryAdapter.getCount());
 		mGallery.setAdapter(mGalleryAdapter);
 		mGallery.setOnItemSelectedListener(new OnItemSelectedListener() {
 
@@ -67,7 +67,7 @@ public class HomeActivity extends Activity {
 			public void onItemSelected(AdapterView<?> arg0, View arg1,
 					int arg2, long arg3) {
 				
-				mMyView.setSeletion(arg2);
+				//mMyView.setSeletion(arg2);
 			}
 
 			@Override
