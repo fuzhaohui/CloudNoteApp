@@ -2,11 +2,17 @@ apply plugin: 'android'
 
 android {
     signingConfigs {
+        CloudNoteApp {
+            keyAlias 'cloudnoteapp'
+            keyPassword 'shinelog93'
+            storeFile file('/home/fuzhaohui/keystores/cloudnoteapp.jks')
+            storePassword 'shinelog93'
+        }
     }
     compileSdkVersion 19
     buildToolsVersion '20.0.0'
     defaultConfig {
-        applicationId "com.ces.cloudnote.app"
+        applicationId 'com.ces.cloudnote.app'
         minSdkVersion 9
         targetSdkVersion 19
     }
@@ -14,7 +20,15 @@ android {
         release {
             runProguard false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            jniDebugBuild true
+            signingConfig signingConfigs.CloudNoteApp
         }
+        debug {
+            jniDebugBuild true
+            signingConfig signingConfigs.CloudNoteApp
+        }
+    }
+    productFlavors {
     }
 }
 

@@ -7,12 +7,12 @@
     <include layout="@layout/title_view" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/offlineText"
         style="@style/account_more_list_text"
         android:text="@string/leave_look" />
 
     <ImageView
-        android:id="@+id/imageView1"
+        android:id="@+id/offLineImage"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/list_item_divide_operate" />
@@ -23,13 +23,13 @@
         android:text="@string/play_history" />
 
     <ImageView
-        android:id="@+id/imageView1"
+        android:id="@+id/imageView2"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/list_item_divide_operate" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/textView2"
         style="@style/account_more_list_text"
         android:text="@string/favorite" />
 
@@ -40,12 +40,12 @@
         android:background="@drawable/list_item_divide_operate" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/textView3"
         style="@style/account_more_list_text"
         android:text="@string/my_account" />
 
     <ImageView
-        android:id="@+id/imageView1"
+        android:id="@+id/imageView3"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/list_item_divide_operate" />

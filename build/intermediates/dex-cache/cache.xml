@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pre-dex-items>
+
+    <item
+        dex="/home/fuzhaohui/AndroidStudioProjects/CloudNoteApp/app/build/intermediates/pre-dexed/release/ksoap2-3.0.0--d0d69bf8a7c1085c95b344e1d571e9cb0ec36579.jar"
+        jar="/home/fuzhaohui/AndroidStudioProjects/CloudNoteApp/app/libs/ksoap2-3.0.0-.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="224c93f1824fa17b96db7250c2e5e2703d45e052"/>
+    <item
+        dex="/home/fuzhaohui/AndroidStudioProjects/CloudNoteApp/app/build/intermediates/pre-dexed/release/support-annotations-20.0.0-ef0d249a0d4d1d83588ebb4373916cc9b6f73e55.jar"
+        jar="/home/fuzhaohui/android-sdk-linux/sdk/extras/android/m2repository/com/android/support/support-annotations/20.0.0/support-annotations-20.0.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="9d9013e9ff35fc3756411e62873c363c70c638fa"/>
+    <item
+        dex="/home/fuzhaohui/AndroidStudioProjects/CloudNoteApp/app/build/intermediates/pre-dexed/release/classes-f33b94260e81da08d995b3b0a3da224ab7ff5600.jar"
+        jar="/home/fuzhaohui/AndroidStudioProjects/CloudNoteApp/app/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="8694693636ab36910c8100ce527c258ff3ebece0"/>
+    <item
+        dex="/home/fuzhaohui/AndroidStudioProjects/CloudNoteApp/app/build/intermediates/pre-dexed/release/internal_impl-20.0.0-efc578894a3065828aeb77347a0feb31ac36224f.jar"
+        jar="/home/fuzhaohui/AndroidStudioProjects/CloudNoteApp/app/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/libs/internal_impl-20.0.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="e40b3078e3fbd353c9f44da8df25a8fc0078209d"/>
+    <item
+        dex="/home/fuzhaohui/AndroidStudioProjects/CloudNoteApp/app/build/intermediates/pre-dexed/release/classes-e1d7f5ea43924f9cb2da6686a7f644bca6fa1b4f.jar"
+        jar="/home/fuzhaohui/AndroidStudioProjects/CloudNoteApp/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="3499ceba05ca1f6037c6a2fad73df8f636224a28"/>
+    <item
+        dex="/home/fuzhaohui/AndroidStudioProjects/CloudNoteApp/app/build/intermediates/pre-dexed/release/classes-9cb6cb22e8004938f8b38ab2c617d39701a516d0.jar"
+        jar="/home/fuzhaohui/AndroidStudioProjects/CloudNoteApp/app/build/intermediates/exploded-aar/CloudNoteApp/imageloader/unspecified/classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="1acb48910b19a74ef071687ae1821b3014ed63c3"/>
+
+</pre-dex-items>

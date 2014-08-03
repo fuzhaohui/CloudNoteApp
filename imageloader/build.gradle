@@ -2,21 +2,35 @@ apply plugin: 'com.android.library'
 
 android {
     signingConfigs {
+        ImageLoader {
+            keyAlias 'cloudnoteapp'
+            keyPassword 'shinelog93'
+            storeFile file('/home/fuzhaohui/keystores/cloudnoteapp.jks')
+            storePassword 'shinelog93'
+        }
     }
     compileSdkVersion 19
     buildToolsVersion '20.0.0'
     defaultConfig {
-        applicationId "com.nostra13.universalimageloader"
+        applicationId 'com.nostra13.universalimageloader'
         minSdkVersion 9
         targetSdkVersion 19
         versionCode 1
-        versionName "1.0"
+        versionName '1.0'
     }
     buildTypes {
         release {
             runProguard false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            jniDebugBuild true
+            signingConfig signingConfigs.ImageLoader
         }
+        debug {
+            jniDebugBuild true
+            signingConfig signingConfigs.ImageLoader
+        }
+    }
+    productFlavors {
     }
 }
 
