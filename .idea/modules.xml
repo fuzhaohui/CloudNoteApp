@@ -10,7 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/external/cards/cards.iml" filepath="$PROJECT_DIR$/external/cards/cards.iml" />
       <module fileurl="file://$PROJECT_DIR$/external/datetimepicker/datetimepicker.iml" filepath="$PROJECT_DIR$/external/datetimepicker/datetimepicker.iml" />
       <module fileurl="file://$PROJECT_DIR$/external/drag-sort-listview/drag-sort-listview.iml" filepath="$PROJECT_DIR$/external/drag-sort-listview/drag-sort-listview.iml" />
-      <module fileurl="file://$PROJECT_DIR$/imageloader/imageloader.iml" filepath="$PROJECT_DIR$/imageloader/imageloader.iml" />
+      <module fileurl="file://$PROJECT_DIR$/external/imageloader/imageloader.iml" filepath="$PROJECT_DIR$/external/imageloader/imageloader.iml" />
       <module fileurl="file://$PROJECT_DIR$/external/silk/silk.iml" filepath="$PROJECT_DIR$/external/silk/silk.iml" />
     </modules>
   </component>
