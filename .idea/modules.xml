@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/external/ActionBar-PullToRefresh/ActionBar-PullToRefresh.iml" filepath="$PROJECT_DIR$/external/ActionBar-PullToRefresh/ActionBar-PullToRefresh.iml" />
       <module fileurl="file://$PROJECT_DIR$/CloudNoteApp.iml" filepath="$PROJECT_DIR$/CloudNoteApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/external/ResideMenu/ResideMenu.iml" filepath="$PROJECT_DIR$/external/ResideMenu/ResideMenu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/external/ShowcaseView/ShowcaseView.iml" filepath="$PROJECT_DIR$/external/ShowcaseView/ShowcaseView.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/external/cards/cards.iml" filepath="$PROJECT_DIR$/external/cards/cards.iml" />
+      <module fileurl="file://$PROJECT_DIR$/external/datetimepicker/datetimepicker.iml" filepath="$PROJECT_DIR$/external/datetimepicker/datetimepicker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/external/drag-sort-listview/drag-sort-listview.iml" filepath="$PROJECT_DIR$/external/drag-sort-listview/drag-sort-listview.iml" />
       <module fileurl="file://$PROJECT_DIR$/imageloader/imageloader.iml" filepath="$PROJECT_DIR$/imageloader/imageloader.iml" />
+      <module fileurl="file://$PROJECT_DIR$/external/silk/silk.iml" filepath="$PROJECT_DIR$/external/silk/silk.iml" />
     </modules>
   </component>
 </project>

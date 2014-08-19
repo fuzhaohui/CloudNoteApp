@@ -9,7 +9,15 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/imageloader" />
+            <option value="$PROJECT_DIR$/external" />
+            <option value="$PROJECT_DIR$/external/ActionBar-PullToRefresh" />
+            <option value="$PROJECT_DIR$/external/ResideMenu" />
+            <option value="$PROJECT_DIR$/external/ShowcaseView" />
+            <option value="$PROJECT_DIR$/external/cards" />
+            <option value="$PROJECT_DIR$/external/datetimepicker" />
+            <option value="$PROJECT_DIR$/external/drag-sort-listview" />
+            <option value="$PROJECT_DIR$/external/imageloader" />
+            <option value="$PROJECT_DIR$/external/silk" />
           </set>
         </option>
       </GradleProjectSettings>
