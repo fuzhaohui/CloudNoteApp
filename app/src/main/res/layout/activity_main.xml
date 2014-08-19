@@ -88,8 +88,16 @@
 	        android:text="@string/bitmapfun"
 	        android:onClick="bitmapfun" />
     </TableRow>
-</TableLayout>
+    <TableRow>
+        <Button
+            android:id="@+id/photoprocessing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/phtotprocessing"/>
 
+    </TableRow>
+
+    </TableLayout>
 
     
   

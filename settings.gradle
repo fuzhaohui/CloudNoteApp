@@ -1,1 +1,1 @@
-include ':app', ':imageloader'
+include ':app', ':external:imageloader', ':external:ActionBar-PullToRefresh', ':external:datetimepicker', ':external:drag-sort-listview', ':external:ShowcaseView', ':external:ResideMenu'

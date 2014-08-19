@@ -12,6 +12,7 @@ import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.provider.ContactsContract.CommonDataKinds.Phone;
 import android.util.Log;
 import android.view.Menu;
@@ -41,13 +42,21 @@ public class MainActivity extends Activity implements OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button send_message = (Button) findViewById(R.id.send_message);
-        send_message.setOnClickListener(new Button.OnClickListener(){
+        Button send_message = (Button)findViewById(R.id.send_message);
+        send_message.setOnClickListener(new OnClickListener(){
 
 			@Override
 			public void onClick(View view) {
 				sendMessage(view);
-			}});
+			}
+         });
+    Button photoProcessingBtn = (Button)findViewById(R.id.photoprocessing);
+    photoProcessingBtn.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
     }
 
 
@@ -161,7 +170,7 @@ public class MainActivity extends Activity implements OnClickListener {
     	Intent intent = new Intent(this, ImageGridActivity.class);
     	startActivity(intent);
     }
-    
+
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		// Check which request it is that we're responding to
