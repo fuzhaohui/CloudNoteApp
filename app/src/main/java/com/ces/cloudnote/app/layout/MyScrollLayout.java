@@ -19,7 +19,7 @@ public class MyScrollLayout extends ViewGroup {
 
 	private static final int SNAP_VELOCITY = 600;
 
-	private Scroller mScroller; // 滑动控制�?
+	private Scroller mScroller; // 滑动控制
 
 	private int mCurScreen;
 
@@ -37,20 +37,16 @@ public class MyScrollLayout extends ViewGroup {
 
 	public MyScrollLayout(Context context) {
 		super(context);
-		// TODO Auto-generated constructor stub
 		init(context);
 	}
 
 	public MyScrollLayout(Context context, AttributeSet attrs) {
 		super(context, attrs);
-		// TODO Auto-generated constructor stub
 		init(context);
 	}
 
 	public MyScrollLayout(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
-		// TODO Auto-generated constructor stub
-
 		init(context);
 	}
 
@@ -86,7 +82,6 @@ public class MyScrollLayout extends ViewGroup {
 
 	@Override
 	protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-		// TODO Auto-generated method stub
 		super.onMeasure(widthMeasureSpec, heightMeasureSpec);
 
 		final int width = MeasureSpec.getSize(widthMeasureSpec);
@@ -130,7 +125,6 @@ public class MyScrollLayout extends ViewGroup {
 
 	@Override
 	public void computeScroll() {
-		// TODO Auto-generated method stub
 		if (mScroller.computeScrollOffset()) {
 			scrollTo(mScroller.getCurrX(), mScroller.getCurrY());
 			postInvalidate();
@@ -139,8 +133,6 @@ public class MyScrollLayout extends ViewGroup {
 
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
-		// TODO Auto-generated method stub
-
 		final int action = event.getAction();
 		final float x = event.getX();
 		//final float y = event.getY();
@@ -190,10 +182,9 @@ public class MyScrollLayout extends ViewGroup {
 				// Fling enough to move left
 				Log.e(TAG, "snap left");
 				snapToScreen(mCurScreen - 1);
-			} else if (velocityX < -SNAP_VELOCITY
-					&& mCurScreen < getChildCount() - 1) {
+			} else if (velocityX < -SNAP_VELOCITY && mCurScreen < getChildCount() - 1) {
 				// Fling enough to move right
-				Log.e(TAG, "snap right");
+				Log.i(TAG, "snap right");
 				snapToScreen(mCurScreen + 1);
 			} else {
 				snapToDestination();

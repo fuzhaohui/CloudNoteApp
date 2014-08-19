@@ -1,10 +1,5 @@
 package com.ces.cloudnote.app;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -12,8 +7,8 @@ import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.provider.ContactsContract.CommonDataKinds.Phone;
+import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
@@ -33,25 +28,35 @@ import com.ces.cloudnote.app.photobyintent.PhotoIntentActivity;
 import com.ces.cloudnote.app.qiyi.QiyiMainActivity;
 import com.ces.cloudnote.app.voicemail.AddVoicemailActivity;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+
 public class MainActivity extends Activity implements OnClickListener {
 
     public static final String EXTRA_MESSAGE = "com.ces.cloudnote.app.MESSAGE";
-    public static final int PICK_CONTACT_REQUEST = 1; 
-    
+    public static final int PICK_CONTACT_REQUEST = 1;
+
+
+
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button send_message = (Button)findViewById(R.id.send_message);
+
+
         send_message.setOnClickListener(new OnClickListener(){
 
 			@Override
 			public void onClick(View view) {
-				sendMessage(view);
-			}
-         });
-    Button photoProcessingBtn = (Button)findViewById(R.id.photoprocessing);
-    photoProcessingBtn.setOnClickListener(new OnClickListener() {
+                sendMessage(view);
+            }
+        });
+        Button photoProcessingBtn = (Button)findViewById(R.id.photoprocessing);
+        photoProcessingBtn.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -109,6 +114,15 @@ public class MainActivity extends Activity implements OnClickListener {
         intent.putExtra(EXTRA_MESSAGE, message);
         
         startActivity(intent);
+        TelephonyManager tm = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
+        String deviceid = tm.getDeviceId();
+        String tel = tm.getLine1Number();//手机号码
+        String imei = tm.getSimSerialNumber();
+        String imsi = tm.getSubscriberId();
+        Log.i("deviceId", deviceid);
+        Log.i("Tel", tel);
+        Log.i("IMEI", imei);
+        Log.i("IMSI", imsi);
     }
     
     public void contact(View view) {
