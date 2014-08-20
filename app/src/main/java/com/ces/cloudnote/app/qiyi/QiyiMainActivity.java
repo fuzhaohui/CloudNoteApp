@@ -23,19 +23,6 @@ import com.ces.cloudnote.app.qiyi.more.MoreActivity;
 import com.ces.cloudnote.app.qiyi.search.SearchActivity;
 
 
-/**
- * 相关描述：
- *
- * 项目名称： qiyi 
- * 创建者： Fu Zhaohui 
- * 创建时间：2013-6-8 上午10:36:22 
- * 最后一次修改时（可选）： 2013-6-8 上午10:36:22 
- * 最后一次修改人（可选）： Fu Zhaohui 
- * 修改原因（可选）：  
- * 当前版本： v1.0 
- *
- */
-@SuppressWarnings("deprecation")
 public class QiyiMainActivity extends TabActivity implements OnClickListener {
 	public static String TAB_TAG_HOME = "home";  //首页
 	public static String TAB_TAG_CHANNEL = "channel"; //分类

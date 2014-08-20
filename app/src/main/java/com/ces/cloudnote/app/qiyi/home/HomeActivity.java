@@ -53,7 +53,7 @@ public class HomeActivity extends Activity {
 	private void prepareView() {
 		mExpandableListView = (ExpandableListView) findViewById(R.id.expandableListView1);
 		MyListAdapter adapter = new MyListAdapter();
-		View header = LayoutInflater.from(this).inflate(R.layout.header_view,
+		View header = LayoutInflater.from(this).inflate(R.layout.qiyi_header_view,
 				null);
 		mGallery = (Gallery) header.findViewById(R.id.home_gallery);
 		//mMyView = (FlowIndicator) header.findViewById(R.id.myView);
@@ -162,7 +162,7 @@ public class HomeActivity extends Activity {
 				ViewGroup arg4) {
 			if (arg3 == null) {
 				arg3 = LayoutInflater.from(HomeActivity.this).inflate(
-						R.layout.list_child_item, null);
+						R.layout.qiyi_list_child_item, null);
 			}
 			return arg3;
 		}

@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -22,7 +23,7 @@ import com.ces.cloudnote.app.contactslist.ContactsListActivity;
 import com.ces.cloudnote.app.fragments.FragmentMainActivity;
 import com.ces.cloudnote.app.imageloader.HomeActivity;
 import com.ces.cloudnote.app.navigation.NavigateActivity;
-import com.ces.cloudnote.app.navigationdrawer.NavigateDrawerActivity;
+import com.ces.cloudnote.app.drawer.DrawerActivity;
 import com.ces.cloudnote.app.networkusage.NetworkActivity;
 import com.ces.cloudnote.app.newsreader.NewsReaderActivity;
 import com.ces.cloudnote.app.photobyintent.PhotoIntentActivity;
@@ -110,6 +111,14 @@ public class MainActivity extends Activity implements OnClickListener {
                 newsreader(view);
             }
         });
+        Button voiceEmailBtn = (Button)findViewById(R.id.voiceEmail_btn);
+        voiceEmailBtn.setOnClickListener(new OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                voicemail(view);
+            }
+        });
         Button networkUsageBtn = (Button)findViewById(R.id.networkUsage_btn);
         networkUsageBtn.setOnClickListener(new OnClickListener(){
 
@@ -155,6 +164,20 @@ public class MainActivity extends Activity implements OnClickListener {
             @Override
             public void onClick(View view) {
 
+            }
+        });
+        Button webViewBtn = (Button)findViewById(R.id.webView_btn);
+        webViewBtn.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                webView(view);
+            }
+        });
+        Button demoLayoutBtn = (Button)findViewById(R.id.demoLayout);
+        demoLayoutBtn.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                demoLayout(view);
             }
         });
     }
@@ -251,7 +274,7 @@ public class MainActivity extends Activity implements OnClickListener {
     }
 
     public void drawer(View view) {
-    	Intent intent = new Intent(this, NavigateDrawerActivity.class);
+    	Intent intent = new Intent(this, DrawerActivity.class);
     	startActivity(intent);
     }
     
@@ -282,6 +305,16 @@ public class MainActivity extends Activity implements OnClickListener {
 
     public void baiduMap(View view) {
         Intent intent = new Intent(this, DemoMainActivity.class);
+        startActivity(intent);
+    }
+
+    public void webView(View view) {
+        Intent intent = new Intent(this, WebViewActivity.class);
+        startActivity(intent);
+    }
+
+    public void demoLayout(View view) {
+        Intent intent = new Intent(this, DemoLayoutActivity.class);
         startActivity(intent);
     }
 

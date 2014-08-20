@@ -15,8 +15,10 @@
 -->
 
 <!-- BEGIN_INCLUDE(all) -->
-<resources>
-    <item name="main_layout" type="layout">@layout/twopanes_narrow</item>
-    <bool name="has_two_panes">true</bool>
-</resources>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textSize="16sp"
+    android:textColor="#01511a"
+    android:padding="10dp" />
 <!-- END_INCLUDE(all) -->

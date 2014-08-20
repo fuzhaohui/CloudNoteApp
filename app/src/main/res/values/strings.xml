@@ -3,7 +3,6 @@
 
     <string name="app_name">云框架Demo</string>
     <string name="app_description">本应用为学习各个组件使用积累而成的应用</string>
-    
     <string name="show_message">显示信息</string>
     <string name="action_settings">设置</string>
     <string name="edit_message">输入信息</string>
@@ -14,14 +13,12 @@
     <string name="default_name">shine</string>
     <string name="title_activity_receive">ReceiveActivity</string>
     <string name="android.widget.ShareActionProviderandroid.widget.ShareActionProvider">分享</string>
-    
     <string name="photoIntent_btn">拍照</string>
     <string name="btnIntend">拍大图片</string>
     <string name="btnIntendS">拍小图片</string>
     <string name="btnIntendV">Take Video</string>
     <string name="cannot">Cannot</string>
     <string name="album_name">CameraSample</string>
-    
     <string name="contacts">联系人</string>
     <string name="activity_contacts_list">联系人列表</string>
     <string name="activity_contact_detail">联系人详情</string>
@@ -33,19 +30,14 @@
     <string name="menu_edit_contact">编辑联系人</string>
     <string name="no_contacts">没有任何联系人</string>
     <string name="no_contact_selected">未选择联系人</string>
-
     <string name="alphabet">ABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
-
     <string name="search_match_other">匹配其它字段</string>
-
     <string name="no_address">没找到地址</string>
     <string name="no_intent_found">No application found to handle this action</string>
-    
     <string name="uihider">UI隐藏</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
-	
-    
+
     <!-- AddVoicemailActivity -->
     <string name="voicemail">声音邮件</string>
     <string name="add_voicemail">Add voicemail</string>
@@ -56,8 +48,7 @@
     <string name="voicemail_store_error">Error in storing voicemail!</string>
     <string name="send">Send</string>
     <string name="record_voice">Record voice</string>
-    
-    
+
     <!-- Activity titles -->
     <string name="imageloader">图片加载</string>
     <string name="ac_name_image_list">Image List Example</string>
@@ -76,14 +67,13 @@
     <string name="button_image_gallery">Gallery</string>
     <!-- Content descriptions -->
     <string name="descr_image">Image</string>
-    
     <string name="navigate">菜单导航</string>
     <string name="dummy_section_text">Section %1d is just a dummy section.</string>
     <string name="demo_external_activity">Demo External Activity</string>
     <string name="demo_collection">Demo Collection</string>
-    
-     <string name="drawer">抽屉菜单</string>
-     <string-array name="planets_array">
+    <string name="drawer">抽屉菜单</string>
+
+    <string-array name="planets_array">
         <item>Mercury</item>
         <item>Venus</item>
         <item>Earth</item>
@@ -93,30 +83,26 @@
         <item>Uranus</item>
         <item>Neptune</item>
     </string-array>
+
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
     <string name="action_websearch">Web search</string>
     <string name="app_not_available">Sorry, there\'s no web browser available</string>
-    
     <string name="newsreader">新闻阅读</string>
-    
     <string name="networkusage">网络浏览</string>
-     <!--  Menu items -->
+    <!-- Menu items -->
     <string name="settings">设置</string>
     <string name="refresh">刷新</string>
 
-    <!--  NetworkActivity -->
+    <!-- NetworkActivity -->
     <string name="page_title">Newest StackOverflow questions tagged \'android\'</string>
     <string name="updated">Last updated:</string>
     <string name="lost_connection">Lost connection.</string>
     <string name="wifi_connected">Wi-Fi 已连接.</string>
     <string name="connection_error">不能加载内存，请检查网络连接.</string>
     <string name="xml_error">解析XML错误.</string>
-
     <string name="photoIntent">拍照</string>
-    
     <string name="fragments">基本框架</string>
-    
     <string name="qiyi">奇艺视频</string>
     <string name="category_home">首页</string>
     <string name="category_channel">分类</string>
@@ -136,16 +122,15 @@
     <string name="feedback">信息反馈</string>
     <string name="help">使用帮助</string>
     <string name="about">更多</string>
-    
     <string name="bitmapfun">表格图片</string>
     <string name="clear_cache_menu">清除缓存</string>
     <string name="clear_cache_complete_toast">缓存已被清除</string>
     <string name="no_network_connection_toast">未连接到网络</string>
-
     <string name="phtotprocessing">照片处理</string>
+    <string name="webView">嵌入网页</string>
     <string name="baiduMap">百度地图</string>
-
     <string name="sdk_name">Baidu Navigation SDK Demo</string>
+
     <string-array name="sdkapi_items">
         <item>关键字搜索</item>
         <item>周边搜索</item>
@@ -158,6 +143,7 @@
         <item>离线数据管理</item>
         <item>自定义图层</item>
     </string-array>
+
     <string name="search_start">搜索</string>
     <string name="search_tips">离线检索需要使用"导航离线数据下载"demo下载数据之后才能正常使用！检索范围固定为广东省-深圳市，其他城市请修改demo源代码。</string>
     <string name="antigeo_tips">离线反geo需要使用"导航离线数据下载"demo下载数据之后才能正常使用！</string>
@@ -197,4 +183,7 @@
     <string name="change_to_traditional">地图切换为繁体</string>
     <string name="change_to_simplified_tips">已切换为简体，请在地图图层页看效果</string>
     <string name="change_to_traditional_tips">已切换为繁体，请在地图图层页看效果</string>
+    <string name="title_activity_demo_layout">\@string/test</string>
+    <string name="hello_world">Hello world!</string>
+
 </resources>

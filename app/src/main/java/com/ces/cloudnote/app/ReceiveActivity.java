@@ -13,7 +13,7 @@ public class ReceiveActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_receive);
+		setContentView(R.layout.receive);
 		
 		Intent intent = getIntent();
 		String action = intent.getAction();

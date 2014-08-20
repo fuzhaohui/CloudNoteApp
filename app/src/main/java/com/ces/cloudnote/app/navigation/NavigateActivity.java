@@ -50,7 +50,7 @@ public class NavigateActivity extends FragmentActivity implements ActionBar.TabL
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_navigate);
+        setContentView(R.layout.navigate);
 
         // Create the adapter that will return a fragment for each of the three primary sections
         // of the app.

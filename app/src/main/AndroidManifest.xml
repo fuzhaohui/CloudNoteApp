@@ -4,17 +4,18 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
-    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="19" />
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="19" />
 
-    <uses-permission android:name="android.permission.READ_CONTACTS"/>
-    <uses-permission android:name="android.permission.WRITE_SMS"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
     <uses-permission android:name="com.android.voicemail.permission.ADD_VOICEMAIL" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
     <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -35,73 +36,85 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
-	
+
     <application
-        android:allowBackup="true"
         android:name=".imageloader.UILApplication"
+        android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
+        android:description="@string/app_description"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="MainActivity"
+            android:name=".MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
+
                 <category android:name="android.intent.category.DEFAULT" />
+
                 <data android:mimeType="image/*" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
+
                 <category android:name="android.intent.category.DEFAULT" />
+
                 <data android:mimeType="text/plain" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.SEND_MULTIPLE" />
+
                 <category android:name="android.intent.category.DEFAULT" />
+
                 <data android:mimeType="image/*" />
             </intent-filter>
         </activity>
-        <activity android:name="DisplayMessageActivity"
+        <activity
+            android:name=".DisplayMessageActivity"
             android:label="@string/title_activity_display_message"
-            android:parentActivityName="com.ces.cloudnote.app.MainActivity" >
+            android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.ces.cloudnote.app.MainActivity" />
-        </activity> 
-        <activity android:name="ReceiveActivity"
+        </activity>
+        <activity
+            android:name=".ReceiveActivity"
             android:label="@string/title_activity_receive" >
         </activity>
-
-        <activity android:name="WelcomeActivity"
+        <activity
+            android:name=".WelcomeActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".contactslist.ContactsListActivity"
-             android:label="@string/activity_contacts_list"
-             android:description="@string/app_description"
-             android:icon="@drawable/ic_launcher"
-             android:theme="@style/AppTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.SEARCH"/>
-            </intent-filter>
-            <meta-data android:resource="@xml/searchable_contacts" android:name="android.app.searchable"/>
-        </activity>
-        <activity android:name=".contactslist.ContactDetailActivity"></activity>
-
         <activity
-            android:name="SystemUIHidderActivity"
+            android:name=".contactslist.ContactsListActivity"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/activity_contacts_list"
+            android:theme="@style/AppTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable_contacts" />
+        </activity>
+        <activity android:name=".contactslist.ContactDetailActivity" />
+        <activity
+            android:name=".SystemUIHidderActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:theme="@style/FullscreenTheme" >
         </activity>
-        <activity android:name=".voiceemail.AddVoicemailActivity"
-             android:label="添加声音邮件" ></activity>
-         
+        <activity
+            android:name=".voiceemail.AddVoicemailActivity"
+            android:label="添加声音邮件" />
         <activity
             android:name=".imageloader.HomeActivity"
-            android:label="加载图片">
+            android:label="加载图片" >
         </activity>
         <activity
             android:name=".imageloader.ImageListActivity"
@@ -126,97 +139,129 @@
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
         </receiver>
-        
-        <activity android:name=".navigation.NavigateActivity"
-            android:label="导航"/>
-        <activity android:name=".navigation.CollectionActivity"
-            android:label="@string/demo_collection"/>
-         
-        <activity android:name=".photobyintent.PhotoIntentActivity"
-            android:label="拍照"/>
-        <activity android:name=".navigationdrawer.NavigateDrawerActivity"
-            android:label="声音邮件"/>
-        
-        <activity android:name=".newsreader.NewsReaderActivity"
-            android:label="新闻阅读"/>
-        <activity android:name=".newsreader.ArticleActivity"
+
+        <activity
+            android:name=".navigation.NavigateActivity"
+            android:label="Tab导航菜单" />
+        <activity
+            android:name=".navigation.CollectionActivity"
+            android:label="@string/demo_collection" />
+        <activity
+            android:name=".photobyintent.PhotoIntentActivity"
+            android:label="拍照" />
+        <activity
+            android:name=".drawer.DrawerActivity"
+            android:label="声音邮件" />
+        <activity
+            android:name=".newsreader.NewsReaderActivity"
+            android:label="新闻阅读" />
+        <activity
+            android:name=".newsreader.ArticleActivity"
             android:label="文章详情"
-            android:theme="@style/NewsReaderStyle_NoActionBar"/>
-        
-        <activity android:name=".networkusage.NetworkActivity"
-            android:label="网络阅读"/>
-        <activity android:name=".networkusage.SettingsActivity"
+            android:theme="@style/NewsReaderStyle_NoActionBar" />
+        <activity
+            android:name=".networkusage.NetworkActivity"
+            android:label="网络阅读" />
+        <activity
+            android:name=".networkusage.SettingsActivity"
             android:label="设置" >
-             <intent-filter>
+            <intent-filter>
                 <action android:name="android.intent.action.MANAGE_NETWORK_USAGE" />
+
                 <category android:name="android.intent.category.DEFAULT" />
-          </intent-filter>
+            </intent-filter>
         </activity>
-        <activity android:name=".fragments.FragmentMainActivity"></activity>
-        
-        <activity android:name=".qiyi.QiyiMainActivity"
-            android:label="奇艺"/>
-        <activity android:name=".qiyi.account.AccountActivity"
-            android:label="帐号"/>
-        <activity android:name=".qiyi.channel.ChannelActivity"
-            android:label="渠道"/>
-        <activity android:name=".qiyi.search.SearchActivity"
-            android:label="搜索"/>
-        <activity android:name=".qiyi.home.HomeActivity"
-            android:label="首页"/>
-        <activity android:name=".qiyi.more.MoreActivity"
-            android:label="更多"/>
-        
+        <activity android:name=".fragments.FragmentMainActivity" />
+        <activity
+            android:name=".qiyi.QiyiMainActivity"
+            android:label="奇艺" />
+        <activity
+            android:name=".qiyi.account.AccountActivity"
+            android:label="帐号" />
+        <activity
+            android:name=".qiyi.channel.ChannelActivity"
+            android:label="渠道" />
+        <activity
+            android:name=".qiyi.search.SearchActivity"
+            android:label="搜索" />
+        <activity
+            android:name=".qiyi.home.HomeActivity"
+            android:label="首页" />
+        <activity
+            android:name=".qiyi.more.MoreActivity"
+            android:label="更多" />
         <activity
             android:name=".bitmapfun.ui.ImageDetailActivity"
+            android:label="表格图片"
             android:parentActivityName=".bitmapfun.ui.ImageGridActivity"
-            android:theme="@style/AppTheme.FullScreen"
-            android:label="表格图片">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".bitmapfun.ui.ImageGridActivity"/>
+            android:theme="@style/AppTheme.FullScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".bitmapfun.ui.ImageGridActivity" />
         </activity>
         <activity
             android:name=".bitmapfun.ui.ImageGridActivity"
-            android:theme="@style/AppTheme" >
+            android:theme="@style/AppTheme">
         </activity>
 
-
-        <meta-data android:name="com.baidu.lbsapi.API_KEY"
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
             android:value="my_access_key" />
 
         <activity
             android:name=".baidumap.DemoMainActivity"
             android:configChanges="orientation|screenSize|keyboard|keyboardHidden"
             android:label="@string/sdk_name" >
-            <!--<intent-filter>
+
+            <!--
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
+            </intent-filter>
+            -->
         </activity>
-
         <activity
             android:name=".baidumap.RouteGuideDemo"
             android:configChanges="orientation|screenSize|keyboard|keyboardHidden"
             android:label="@string/title_route_guide_demo" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.BAIDUNAVISDK_DEMO" />
             </intent-filter>
         </activity>
         <activity
             android:name=".baidumap.BNavigatorActivity"
-            android:configChanges="orientation|screenSize|keyboard|keyboardHidden"/>
+            android:configChanges="orientation|screenSize|keyboard|keyboardHidden" />
         <activity
             android:name=".baidumap.RoutePlanDemo"
             android:configChanges="orientation|screenSize|keyboard|keyboardHidden"
             android:label="@string/title_route_plan_demo" >
             <intent-filter>
-                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!-- <action android:name="android.intent.action.MAIN" /> -->
                 <category android:name="android.intent.category.BAIDUNAVISDK_DEMO" />
             </intent-filter>
         </activity>
 
-        <service android:name="com.baidu.navi.location.f" android:enabled="true"/>
+        <service
+            android:name="com.baidu.navi.location.f"
+            android:enabled="true" />
+
+        <activity
+            android:name=".WebViewActivity"
+            android:label="@string/webView"
+            android:theme="@style/WebViewTheme" >
+        </activity>
+        <activity
+            android:name=".DemoLayoutActivity"
+            android:label="@string/title_activity_demo_layout"
+            android:theme="@style/WebViewTheme"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ces.cloudnote.app.MainActivity" />
+        </activity>
     </application>
-    
+
 </manifest>

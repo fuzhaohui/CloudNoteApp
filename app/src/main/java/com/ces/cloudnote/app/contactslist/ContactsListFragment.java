@@ -16,11 +16,6 @@
 
 package com.ces.cloudnote.app.contactslist;
 
-import java.io.FileDescriptor;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.util.Locale;
-
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -65,6 +60,11 @@ import com.ces.cloudnote.app.BuildConfig;
 import com.ces.cloudnote.app.R;
 import com.ces.cloudnote.app.contactslist.util.ImageLoader;
 import com.ces.cloudnote.app.contactslist.util.Utils;
+
+import java.io.FileDescriptor;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Locale;
 
 /**
  * This fragment displays a list of contacts stored in the Contacts Provider. Each item in the list

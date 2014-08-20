@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/gridview"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:numColumns="auto_fit"
+    android:verticalSpacing="10dp"
+    android:horizontalSpacing="10dp"
+    android:stretchMode="columnWidth"
+    android:gravity="center"
+    >
+
+    <TableRow>
+       <!-- <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:orientation="vertical" >-->
+            <EditText
+                android:id="@+id/edit_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/edit_message"/>
+            <Button
+                android:id="@+id/send_message_btn"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="@string/button_send"
+            />
+            <Button
+                android:id="@+id/demoLayout"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/button_send"
+                />
+        <!--</LinearLayout>-->
+    </TableRow>
+    <!--<TableRow>
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp" >
+            <EditText
+                android:id="@+id/edit_message1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/edit_message"/>
+            <Spinner
+                android:id="@+id/dates"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edit_message1"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/times" />
+            <Spinner
+                android:id="@id/times"
+                android:layout_width="96dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edit_message1"
+                android:layout_alignParentRight="true" />
+            <Button
+                android:layout_width="96dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/times"
+                android:layout_alignParentRight="true"
+                android:text="@string/edit_message" />
+        </RelativeLayout>
+    </TableRow>-->
+    <TableRow>
+    	 <Button
+            android:id="@+id/contact_btn"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/contacts"/>
+	    <Button
+            android:id="@+id/uiHider_btn"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/uihider"/>
+        <Button
+            android:id="@+id/voiceEmail_btn"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/voicemail"/>
+        <Button
+            android:id="@+id/imageLoader_btn"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/imageloader"/>
+    </TableRow>
+    <TableRow>
+        <Button
+            android:id="@+id/navigateMenu_btn"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/navigate"/>
+        
+        <Button
+            android:id="@+id/photoIntent_btn"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/photoIntent"/>
+        
+        <Button
+            android:id="@+id/drawerMenu_btn"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/drawer"/>
+        
+        <Button
+            android:id="@+id/newsReader_btn"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/newsreader"/>
+        
+    </TableRow>
+    <TableRow >
+        <Button
+            android:id="@+id/networkUsage_btn"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/networkusage"/>
+        <Button
+            android:id="@+id/fragments_btn"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/fragments"/>
+         
+        <Button
+            android:id="@+id/qiyi_btn"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/qiyi"/>
+         
+        <Button
+            android:id="@+id/bitmapFun_btn"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/bitmapfun"/>
+    </TableRow>
+    <TableRow>
+        <Button
+            android:id="@+id/photoProcessing_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/phtotprocessing"/>
+        <Button
+            android:id="@+id/baiduMap_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/baiduMap"/>
+        <Button
+            android:id="@+id/webView_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/webView"/>
+
+    </TableRow>
+
+</TableLayout>
+
+
+  
+    
