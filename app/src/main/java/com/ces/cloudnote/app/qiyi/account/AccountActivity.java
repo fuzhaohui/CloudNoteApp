@@ -18,7 +18,7 @@ public class AccountActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.account_activity);
+		setContentView(R.layout.qiyi_account);
 		prepareView();
 		mTitleView.setText(R.string.category_account);
 	}

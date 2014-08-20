@@ -18,7 +18,7 @@ public class SearchActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.search_activity);
+		setContentView(R.layout.qiyi_search);
 		prepareView();
 	}
 

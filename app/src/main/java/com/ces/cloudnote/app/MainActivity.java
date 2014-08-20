@@ -44,15 +44,109 @@ public class MainActivity extends Activity implements OnClickListener {
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Button send_message = (Button)findViewById(R.id.send_message);
-
-
-        send_message.setOnClickListener(new OnClickListener(){
+        setContentView(R.layout.main);
+        Button sendMessageBtn = (Button)findViewById(R.id.send_message);
+        sendMessageBtn.setOnClickListener(new OnClickListener(){
 
 			@Override
 			public void onClick(View view) {
                 sendMessage(view);
+            }
+        });
+        Button contactBtn = (Button)findViewById(R.id.contact_btn);
+        contactBtn.setOnClickListener(new OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                contact(view);
+            }
+        });
+        Button uiHiderBtn = (Button)findViewById(R.id.uiHider_btn);
+        uiHiderBtn.setOnClickListener(new OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                uihider(view);
+            }
+        });
+        Button imageLoaderBtn = (Button)findViewById(R.id.imageLoader_btn);
+        imageLoaderBtn.setOnClickListener(new OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                imageloader(view);
+            }
+        });
+        Button naviageMenuBtn = (Button)findViewById(R.id.navigateMenu_btn);
+        naviageMenuBtn.setOnClickListener(new OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                navigate(view);
+            }
+        });
+        Button photoIntentBtn = (Button)findViewById(R.id.photoIntent_btn);
+        photoIntentBtn.setOnClickListener(new OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                photointent(view);
+            }
+        });
+        Button drawerMenuBtn = (Button)findViewById(R.id.drawerMenu_btn);
+        drawerMenuBtn.setOnClickListener(new OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                drawer(view);
+            }
+        });
+        Button newReaderBtn = (Button)findViewById(R.id.newsReader_btn);
+        newReaderBtn.setOnClickListener(new OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                newsreader(view);
+            }
+        });
+        Button sendMessage = (Button)findViewById(R.id.send_message);
+        sendMessage.setOnClickListener(new OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                sendMessage(view);
+            }
+        });
+        Button networkUsageBtn = (Button)findViewById(R.id.networkUsage_btn);
+        networkUsageBtn.setOnClickListener(new OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                networkusage(view);
+            }
+        });
+        Button fragmentsBtn = (Button)findViewById(R.id.fragments_btn);
+        fragmentsBtn.setOnClickListener(new OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                fragments(view);
+            }
+        });
+        Button qiyiBtn = (Button)findViewById(R.id.qiyi_btn);
+        qiyiBtn.setOnClickListener(new OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                qiyi(view);
+            }
+        });
+        Button bitmapFunBtn = (Button)findViewById(R.id.bitmapFun_btn);
+        bitmapFunBtn.setOnClickListener(new OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                bitmapfun(view);
             }
         });
         Button photoProcessingBtn = (Button)findViewById(R.id.photoprocessing);

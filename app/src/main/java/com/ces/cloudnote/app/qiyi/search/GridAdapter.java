@@ -46,7 +46,7 @@ public class GridAdapter extends BaseAdapter {
 		// TODO Auto-generated method stub
 		if (arg1 == null) {
 			arg1 = LayoutInflater.from(mContext).inflate(
-					R.layout.search_grid_item, null);
+					R.layout.qiyi_search_grid_item, null);
 		}
 		TextView tv = (TextView) arg1.findViewById(R.id.title);
 		tv.setText(test1[arg0]);

@@ -23,7 +23,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.ces.cloudnote.app.R;
-import com.ces.cloudnote.app.qiyi.widget.FlowIndicator;
 
 /**
  * 
@@ -45,7 +44,7 @@ public class HomeActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.home_activity);
+		setContentView(R.layout.qiyi_home);
 		prepareView();
 		mTimer = new Timer();
 		mTimer.scheduleAtFixedRate(new MyTask(), 0, 5000);

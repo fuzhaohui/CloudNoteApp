@@ -48,7 +48,7 @@ public class ImagePagerActivity extends BaseActivity {
 
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.ac_image_pager);
+		setContentView(R.layout.imageloader_image_pager);
 
 		Bundle bundle = getIntent().getExtras();
 		String[] imageUrls = bundle.getStringArray(Extra.IMAGES);

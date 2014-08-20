@@ -47,7 +47,7 @@ public class GalleryAdapter extends BaseAdapter {
 	public View getView(int arg0, View arg1, ViewGroup arg2) {
 		// TODO Auto-generated method stub
 		if (arg1 == null) {
-			arg1 = LayoutInflater.from(mContext).inflate(R.layout.gallery_item,
+			arg1 = LayoutInflater.from(mContext).inflate(R.layout.qiyi_gallery_item,
 					null);
 		}
 		ImageView img = (ImageView) arg1.findViewById(R.id.home_img);

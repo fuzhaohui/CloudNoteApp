@@ -51,7 +51,7 @@ public class ImageListActivity extends AbsListViewBaseActivity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.ac_image_list);
+		setContentView(R.layout.imageloader_image_list);
 
 		Bundle bundle = getIntent().getExtras();
 		imageUrls = bundle.getStringArray(Extra.IMAGES);

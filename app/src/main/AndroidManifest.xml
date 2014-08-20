@@ -40,49 +40,47 @@
                 <data android:mimeType="image/*" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="DisplayMessageActivity"
+        <activity android:name="DisplayMessageActivity"
             android:label="@string/title_activity_display_message"
             android:parentActivityName="com.ces.cloudnote.app.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.ces.cloudnote.app.MainActivity" />
         </activity> 
-        <activity
-            android:name="ReceiveActivity"
+        <activity android:name="ReceiveActivity"
             android:label="@string/title_activity_receive" >
         </activity>
-        <activity
-            android:name="WelcomeActivity"
+
+        <activity android:name="WelcomeActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-         <activity android:name=".contactslist.ContactsListActivity" 
-             android:label="@string/activity_contacts_list" 
-             android:description="@string/app_description" 
-             android:icon="@drawable/ic_launcher" 
+        <activity android:name=".contactslist.ContactsListActivity"
+             android:label="@string/activity_contacts_list"
+             android:description="@string/app_description"
+             android:icon="@drawable/ic_launcher"
              android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH"/>
             </intent-filter>
             <meta-data android:resource="@xml/searchable_contacts" android:name="android.app.searchable"/>
         </activity>
-         <activity android:name=".contactslist.ContactDetailActivity"></activity>
-         
-         <activity
+        <activity android:name=".contactslist.ContactDetailActivity"></activity>
+
+        <activity
             android:name="SystemUIHidderActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/app_name"
             android:theme="@style/FullscreenTheme" >
         </activity>
-         <activity android:name=".voicemail.AddVoicemailActivity" android:label="@string/app_name"></activity>
+        <activity android:name=".voicemail.AddVoicemailActivity"
+             android:label="添加声音邮件" ></activity>
          
-         <activity
+        <activity
             android:name=".imageloader.HomeActivity"
-            android:label="@string/app_name" >
+            android:label="加载图片">
         </activity>
         <activity
             android:name=".imageloader.ImageListActivity"
@@ -108,41 +106,56 @@
             </intent-filter>
         </receiver>
         
-        <activity android:name=".navigation.NavigateActivity"  android:label="@string/app_name" > </activity>
-        <activity android:name=".navigation.CollectionActivity" android:label="@string/demo_collection"></activity>
+        <activity android:name=".navigation.NavigateActivity"
+            android:label="导航"/>
+        <activity android:name=".navigation.CollectionActivity"
+            android:label="@string/demo_collection"/>
          
-        <activity android:name=".photobyintent.PhotoIntentActivity"  android:label="@string/app_name" ></activity>
-        <activity android:name=".navigationdrawer.NavigateDrawerActivity" android:label="@string/app_name"></activity>
+        <activity android:name=".photobyintent.PhotoIntentActivity"
+            android:label="拍照"/>
+        <activity android:name=".navigationdrawer.NavigateDrawerActivity"
+            android:label="声音邮件"/>
         
-        <activity android:name=".newsreader.NewsReaderActivity" android:label="@string/app_name" ></activity>
-        <activity android:name=".newsreader.ArticleActivity" android:theme="@style/NewsReaderStyle_NoActionBar"></activity>
+        <activity android:name=".newsreader.NewsReaderActivity"
+            android:label="新闻阅读"/>
+        <activity android:name=".newsreader.ArticleActivity"
+            android:label="文章详情"
+            android:theme="@style/NewsReaderStyle_NoActionBar"/>
         
-        <activity android:name=".networkusage.NetworkActivity" android:label="@string/app_name" ></activity>
-        <activity android:name=".networkusage.SettingsActivity" android:label="SettingsActivity" >
+        <activity android:name=".networkusage.NetworkActivity"
+            android:label="网络阅读"/>
+        <activity android:name=".networkusage.SettingsActivity"
+            android:label="设置" >
              <intent-filter>
                 <action android:name="android.intent.action.MANAGE_NETWORK_USAGE" />
                 <category android:name="android.intent.category.DEFAULT" />
           </intent-filter>
         </activity>
-        <activity android:name=".fragments.FragmentMainActivity" android:label="@string/app_name" ></activity>
+        <activity android:name=".fragments.FragmentMainActivity"></activity>
         
-        <activity android:name=".qiyi.QiyiMainActivity" />
-        <activity android:name=".qiyi.account.AccountActivity" />
-        <activity android:name=".qiyi.channel.ChannelActivity" />
-        <activity android:name=".qiyi.search.SearchActivity" />
-        <activity android:name=".qiyi.home.HomeActivity" />
-        <activity android:name=".qiyi.more.MoreActivity" />
+        <activity android:name=".qiyi.QiyiMainActivity"
+            android:label="奇艺"/>
+        <activity android:name=".qiyi.account.AccountActivity"
+            android:label="帐号"/>
+        <activity android:name=".qiyi.channel.ChannelActivity"
+            android:label="渠道"/>
+        <activity android:name=".qiyi.search.SearchActivity"
+            android:label="搜索"/>
+        <activity android:name=".qiyi.home.HomeActivity"
+            android:label="首页"/>
+        <activity android:name=".qiyi.more.MoreActivity"
+            android:label="更多"/>
         
         <activity
             android:name=".bitmapfun.ui.ImageDetailActivity"
-            android:label="@string/app_name"
             android:parentActivityName=".bitmapfun.ui.ImageGridActivity"
-            android:theme="@style/AppTheme.FullScreen" >
-            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".bitmapfun.ui.ImageGridActivity" />
+            android:theme="@style/AppTheme.FullScreen"
+            android:label="表格图片">
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".bitmapfun.ui.ImageGridActivity"/>
         </activity>
         <activity
             android:name=".bitmapfun.ui.ImageGridActivity"
-            android:label="@string/app_name"
             android:theme="@style/AppTheme" >
         </activity>
     </application>

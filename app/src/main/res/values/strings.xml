@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Cloud Note App</string>
+    <string name="app_name">云框架Demo</string>
     <string name="app_description">本应用为学习各个组件使用积累而成的应用</string>
     
     <string name="show_message">显示信息</string>
@@ -15,9 +15,9 @@
     <string name="title_activity_receive">ReceiveActivity</string>
     <string name="android.widget.ShareActionProviderandroid.widget.ShareActionProvider">分享</string>
     
-    <string name="photointent">Photo Intent</string>
-    <string name="btnIntend">Take (big) Picture</string>
-    <string name="btnIntendS">Take (small) Picture</string>
+    <string name="photoIntent_btn">拍照</string>
+    <string name="btnIntend">拍大图片</string>
+    <string name="btnIntendS">拍小图片</string>
     <string name="btnIntendV">Take Video</string>
     <string name="cannot">Cannot</string>
     <string name="album_name">CameraSample</string>
@@ -113,6 +113,8 @@
     <string name="wifi_connected">Wi-Fi 已连接.</string>
     <string name="connection_error">不能加载内存，请检查网络连接.</string>
     <string name="xml_error">解析XML错误.</string>
+
+    <string name="photoIntent">拍照</string>
     
     <string name="fragments">基本框架</string>
     

@@ -42,7 +42,7 @@ public class ImageGalleryActivity extends BaseActivity {
 
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.ac_image_gallery);
+		setContentView(R.layout.imageloader_image_gallery);
 
 		Bundle bundle = getIntent().getExtras();
 		imageUrls = bundle.getStringArray(Extra.IMAGES);
