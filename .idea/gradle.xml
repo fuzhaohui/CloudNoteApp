@@ -16,6 +16,7 @@
             <option value="$PROJECT_DIR$/external/cards" />
             <option value="$PROJECT_DIR$/external/datetimepicker" />
             <option value="$PROJECT_DIR$/external/drag-sort-listview" />
+            <option value="$PROJECT_DIR$/external/googlemediaframework" />
             <option value="$PROJECT_DIR$/external/imageloader" />
             <option value="$PROJECT_DIR$/external/silk" />
           </set>
