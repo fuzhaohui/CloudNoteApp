@@ -73,7 +73,7 @@ public class WelcomeActivity extends Activity implements OnViewChangeListener {
 				leftOutAnimation.setAnimationListener(new AnimationListener() {
 					@Override
 					public void onAnimationStart(Animation animation) {
-						mainRLayout.setBackgroundColor(R.color.bgColor);
+						mainRLayout.setBackgroundColor(getResources().getColor(R.color.bgColor));
 					}
 					@Override
 					public void onAnimationRepeat(Animation animation) {
