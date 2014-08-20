@@ -41,8 +41,6 @@ public class MainActivity extends Activity implements OnClickListener {
     public static final String EXTRA_MESSAGE = "com.ces.cloudnote.app.MESSAGE";
     public static final int PICK_CONTACT_REQUEST = 1;
 
-
-
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -199,6 +197,7 @@ public class MainActivity extends Activity implements OnClickListener {
     	SharedPreferences.Editor edit = preferences.edit();
     	edit.putString("name", "fuzhaohui");
     	edit.commit();
+
     	
     	String defaultName = getResources().getString(R.string.default_name);
     	String myName = preferences.getString(getString(R.string.share_key), defaultName);
