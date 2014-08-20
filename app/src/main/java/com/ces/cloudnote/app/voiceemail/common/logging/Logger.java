@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.ces.cloudnote.app.voicemail.common.logging;
+package com.ces.cloudnote.app.voiceemail.common.logging;
 
 import android.util.Log;
 

@@ -16,6 +16,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.ces.cloudnote.app.baidumap.DemoMainActivity;
 import com.ces.cloudnote.app.bitmapfun.ui.ImageGridActivity;
 import com.ces.cloudnote.app.contactslist.ContactsListActivity;
 import com.ces.cloudnote.app.fragments.FragmentMainActivity;
@@ -26,7 +27,7 @@ import com.ces.cloudnote.app.networkusage.NetworkActivity;
 import com.ces.cloudnote.app.newsreader.NewsReaderActivity;
 import com.ces.cloudnote.app.photobyintent.PhotoIntentActivity;
 import com.ces.cloudnote.app.qiyi.QiyiMainActivity;
-import com.ces.cloudnote.app.voicemail.AddVoicemailActivity;
+import com.ces.cloudnote.app.voiceemail.AddVoicemailActivity;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -45,7 +46,7 @@ public class MainActivity extends Activity implements OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-        Button sendMessageBtn = (Button)findViewById(R.id.send_message);
+        Button sendMessageBtn = (Button)findViewById(R.id.send_message_btn);
         sendMessageBtn.setOnClickListener(new OnClickListener(){
 
 			@Override
@@ -109,14 +110,6 @@ public class MainActivity extends Activity implements OnClickListener {
                 newsreader(view);
             }
         });
-        Button sendMessage = (Button)findViewById(R.id.send_message);
-        sendMessage.setOnClickListener(new OnClickListener(){
-
-            @Override
-            public void onClick(View view) {
-                sendMessage(view);
-            }
-        });
         Button networkUsageBtn = (Button)findViewById(R.id.networkUsage_btn);
         networkUsageBtn.setOnClickListener(new OnClickListener(){
 
@@ -149,7 +142,15 @@ public class MainActivity extends Activity implements OnClickListener {
                 bitmapfun(view);
             }
         });
-        Button photoProcessingBtn = (Button)findViewById(R.id.photoprocessing);
+        Button baiduMapBtn = (Button)findViewById(R.id.baiduMap_btn);
+        baiduMapBtn.setOnClickListener(new OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                baiduMap(view);
+            }
+        });
+        Button photoProcessingBtn = (Button)findViewById(R.id.photoProcessing_btn);
         photoProcessingBtn.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -277,6 +278,11 @@ public class MainActivity extends Activity implements OnClickListener {
     public void bitmapfun(View view) {
     	Intent intent = new Intent(this, ImageGridActivity.class);
     	startActivity(intent);
+    }
+
+    public void baiduMap(View view) {
+        Intent intent = new Intent(this, DemoMainActivity.class);
+        startActivity(intent);
     }
 
 	@Override

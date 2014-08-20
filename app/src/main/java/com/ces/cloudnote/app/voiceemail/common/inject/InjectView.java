@@ -14,13 +14,23 @@
  * limitations under the License.
  */
 
-package com.ces.cloudnote.app.voicemail.common.core;
+package com.ces.cloudnote.app.voiceemail.common.inject;
+
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 
 /**
- * An object that can be used to apply filter on voicemail queries made through the voicemail helper
- * interface.
+ * Use this annotation to mark the fields of your Activity as being injectable.
+ * <p>
+ * See the {@link Injector} class for more details of how this operates.
  */
-public interface VoicemailFilter {
-    /** Returns the where clause for this filter. Returns null if the filter is empty. */
-    public String getWhereClause();
+@Target({ ElementType.FIELD })
+@Retention(RetentionPolicy.RUNTIME)
+public @interface InjectView {
+    /**
+     * The resource id of the View to find and inject.
+     */
+    public int value();
 }

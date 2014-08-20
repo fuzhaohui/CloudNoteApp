@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.ces.cloudnote.app.voicemail.common.core;
+package com.ces.cloudnote.app.voiceemail.common.core;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -30,9 +30,9 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.provider.VoicemailContract.Voicemails;
 
-import com.ces.cloudnote.app.voicemail.common.logging.Logger;
-import com.ces.cloudnote.app.voicemail.common.utils.CloseUtils;
-import com.ces.cloudnote.app.voicemail.common.utils.DbQueryUtils;
+import com.ces.cloudnote.app.voiceemail.common.logging.Logger;
+import com.ces.cloudnote.app.voiceemail.common.utils.CloseUtils;
+import com.ces.cloudnote.app.voiceemail.common.utils.DbQueryUtils;
 
 /**
  * Implementation of the {@link VoicemailProviderHelper} interface.

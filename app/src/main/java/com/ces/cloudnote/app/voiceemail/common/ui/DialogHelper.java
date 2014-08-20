@@ -14,23 +14,16 @@
  * limitations under the License.
  */
 
-package com.ces.cloudnote.app.voicemail.common.inject;
-
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
-import java.lang.annotation.Target;
+package com.ces.cloudnote.app.voiceemail.common.ui;
 
 /**
- * Use this annotation to mark the fields of your Activity as being injectable.
+ * Show common Dialogs.
  * <p>
- * See the {@link Injector} class for more details of how this operates.
+ * Contains methods to show common types of Dialog. This is done both for ease of code re-use and to
+ * improve testability. See the implementation {@link DialogHelperImpl} for details.
  */
-@Target({ ElementType.FIELD })
-@Retention(RetentionPolicy.RUNTIME)
-public @interface InjectView {
-    /**
-     * The resource id of the View to find and inject.
-     */
-    public int value();
+public interface DialogHelper {
+    public void showErrorMessageDialog(int titleId, Exception exception);
+
+    public void showErrorMessageDialog(String title, Exception exception);
 }

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.ces.cloudnote.app.voicemail.common.utils;
+package com.ces.cloudnote.app.voiceemail.common.utils;
 
 import android.database.DatabaseUtils;
 import android.text.TextUtils;

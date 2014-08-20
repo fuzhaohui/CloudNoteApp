@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.ces.cloudnote.app.voicemail.common.core;
+package com.ces.cloudnote.app.voiceemail.common.core;
 
 import android.net.Uri;
 

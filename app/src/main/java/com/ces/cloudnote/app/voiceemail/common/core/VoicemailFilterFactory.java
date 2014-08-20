@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package com.ces.cloudnote.app.voicemail.common.core;
+package com.ces.cloudnote.app.voiceemail.common.core;
 
-import static com.ces.cloudnote.app.voicemail.common.utils.DbQueryUtils.concatenateClausesWithAnd;
-import static com.ces.cloudnote.app.voicemail.common.utils.DbQueryUtils.concatenateClausesWithOr;
-import static com.ces.cloudnote.app.voicemail.common.utils.DbQueryUtils.getEqualityClause;
+import static com.ces.cloudnote.app.voiceemail.common.utils.DbQueryUtils.concatenateClausesWithAnd;
+import static com.ces.cloudnote.app.voiceemail.common.utils.DbQueryUtils.concatenateClausesWithOr;
+import static com.ces.cloudnote.app.voiceemail.common.utils.DbQueryUtils.getEqualityClause;
 
 import java.util.ArrayList;
 import java.util.List;

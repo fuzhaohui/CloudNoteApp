@@ -14,16 +14,13 @@
  * limitations under the License.
  */
 
-package com.ces.cloudnote.app.voicemail.common.ui;
+package com.ces.cloudnote.app.voiceemail.common.core;
 
 /**
- * Show common Dialogs.
- * <p>
- * Contains methods to show common types of Dialog. This is done both for ease of code re-use and to
- * improve testability. See the implementation {@link DialogHelperImpl} for details.
+ * An object that can be used to apply filter on voicemail queries made through the voicemail helper
+ * interface.
  */
-public interface DialogHelper {
-    public void showErrorMessageDialog(int titleId, Exception exception);
-
-    public void showErrorMessageDialog(String title, Exception exception);
+public interface VoicemailFilter {
+    /** Returns the where clause for this filter. Returns null if the filter is empty. */
+    public String getWhereClause();
 }

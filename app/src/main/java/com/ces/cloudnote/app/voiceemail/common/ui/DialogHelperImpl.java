@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.ces.cloudnote.app.voicemail.common.ui;
+package com.ces.cloudnote.app.voiceemail.common.ui;
 
 import android.app.Activity;
 import android.app.AlertDialog;

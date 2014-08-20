@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.ces.cloudnote.app.voicemail;
+package com.ces.cloudnote.app.voiceemail;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -35,15 +35,15 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.ces.cloudnote.app.R;
-import com.ces.cloudnote.app.voicemail.common.core.Voicemail;
-import com.ces.cloudnote.app.voicemail.common.core.VoicemailImpl;
-import com.ces.cloudnote.app.voicemail.common.core.VoicemailProviderHelper;
-import com.ces.cloudnote.app.voicemail.common.core.VoicemailProviderHelpers;
-import com.ces.cloudnote.app.voicemail.common.inject.InjectView;
-import com.ces.cloudnote.app.voicemail.common.inject.Injector;
-import com.ces.cloudnote.app.voicemail.common.logging.Logger;
-import com.ces.cloudnote.app.voicemail.common.ui.DialogHelperImpl;
-import com.ces.cloudnote.app.voicemail.common.utils.CloseUtils;
+import com.ces.cloudnote.app.voiceemail.common.core.Voicemail;
+import com.ces.cloudnote.app.voiceemail.common.core.VoicemailImpl;
+import com.ces.cloudnote.app.voiceemail.common.core.VoicemailProviderHelper;
+import com.ces.cloudnote.app.voiceemail.common.core.VoicemailProviderHelpers;
+import com.ces.cloudnote.app.voiceemail.common.inject.InjectView;
+import com.ces.cloudnote.app.voiceemail.common.inject.Injector;
+import com.ces.cloudnote.app.voiceemail.common.logging.Logger;
+import com.ces.cloudnote.app.voiceemail.common.ui.DialogHelperImpl;
+import com.ces.cloudnote.app.voiceemail.common.utils.CloseUtils;
 
 /**
  * A simple activity that stores user entered voicemail data into voicemail content provider. To be

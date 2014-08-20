@@ -14,6 +14,27 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCES_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <!-- SDK1.5需要android.permission.GET_TASKS权限判断本程序是否为当前运行的应用? -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 来电消音 -->
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 	
     <application
         android:allowBackup="true"
@@ -75,7 +96,7 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:theme="@style/FullscreenTheme" >
         </activity>
-        <activity android:name=".voicemail.AddVoicemailActivity"
+        <activity android:name=".voiceemail.AddVoicemailActivity"
              android:label="添加声音邮件" ></activity>
          
         <activity
@@ -158,6 +179,44 @@
             android:name=".bitmapfun.ui.ImageGridActivity"
             android:theme="@style/AppTheme" >
         </activity>
+
+
+        <meta-data android:name="com.baidu.lbsapi.API_KEY"
+            android:value="my_access_key" />
+
+        <activity
+            android:name=".baidumap.DemoMainActivity"
+            android:configChanges="orientation|screenSize|keyboard|keyboardHidden"
+            android:label="@string/sdk_name" >
+            <!--<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+
+        <activity
+            android:name=".baidumap.RouteGuideDemo"
+            android:configChanges="orientation|screenSize|keyboard|keyboardHidden"
+            android:label="@string/title_route_guide_demo" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.BAIDUNAVISDK_DEMO" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".baidumap.BNavigatorActivity"
+            android:configChanges="orientation|screenSize|keyboard|keyboardHidden"/>
+        <activity
+            android:name=".baidumap.RoutePlanDemo"
+            android:configChanges="orientation|screenSize|keyboard|keyboardHidden"
+            android:label="@string/title_route_plan_demo" >
+            <intent-filter>
+                <!--<action android:name="android.intent.action.MAIN" />-->
+                <category android:name="android.intent.category.BAIDUNAVISDK_DEMO" />
+            </intent-filter>
+        </activity>
+
+        <service android:name="com.baidu.navi.location.f" android:enabled="true"/>
     </application>
     
 </manifest>

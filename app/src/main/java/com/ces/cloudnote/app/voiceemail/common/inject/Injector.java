@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.ces.cloudnote.app.voicemail.common.inject;
+package com.ces.cloudnote.app.voiceemail.common.inject;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
