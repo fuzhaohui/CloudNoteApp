@@ -1,5 +1,6 @@
 package com.ces.cloudnote.app;
 
+import android.app.Activity;
 import android.support.v7.app.ActionBar;
 import android.content.Context;
 import android.content.Intent;
@@ -37,7 +38,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends Activity implements OnClickListener {
 
     public static final String EXTRA_MESSAGE = "com.ces.cloudnote.app.MESSAGE";
     public static final int PICK_CONTACT_REQUEST = 1;
@@ -47,8 +48,8 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
+        //ActionBar actionBar = getSupportActionBar();
+        //actionBar.hide();
 
         Button sendMessageBtn = (Button)findViewById(R.id.send_message_btn);
         sendMessageBtn.setOnClickListener(new OnClickListener(){
@@ -364,4 +365,8 @@ public class MainActivity extends ActionBarActivity {
 	    }
 	}
 
+    @Override
+    public void onClick(View v) {
+
+    }
 }

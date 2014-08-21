@@ -42,6 +42,8 @@ public class MenuActivity extends FragmentActivity implements View.OnClickListen
         resideMenu.setMenuListener(menuListener);
         //valid scale factor is between 0.0f and 1.0f. leftmenu'width is 150dip. 
         resideMenu.setScaleValue(0.6f);
+        //resideMenu.setScaleX(0.2f);
+        //resideMenu.setScaleY(0.8f);
 
         // create menu items;
         itemHome     = new ResideMenuItem(this, R.drawable.icon_home,     "Home");
