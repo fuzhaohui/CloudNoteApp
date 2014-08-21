@@ -16,12 +16,6 @@
 
 package com.ces.cloudnote.app.voiceemail;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
@@ -44,6 +38,12 @@ import com.ces.cloudnote.app.voiceemail.common.inject.Injector;
 import com.ces.cloudnote.app.voiceemail.common.logging.Logger;
 import com.ces.cloudnote.app.voiceemail.common.ui.DialogHelperImpl;
 import com.ces.cloudnote.app.voiceemail.common.utils.CloseUtils;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * A simple activity that stores user entered voicemail data into voicemail content provider. To be

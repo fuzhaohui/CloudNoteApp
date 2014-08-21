@@ -7,13 +7,13 @@
  */
 package com.ces.cloudnote.app.utils;
 
-import java.io.File;
-import java.io.IOException;
-
 import android.content.Context;
 import android.net.Uri;
 import android.os.Environment;
 import android.util.Log;
+
+import java.io.File;
+import java.io.IOException;
 
 /**
  * 相关描述：

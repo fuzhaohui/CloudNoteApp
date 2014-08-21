@@ -16,15 +16,15 @@
 
 package com.ces.cloudnote.app.voiceemail.common.core;
 
-import static com.ces.cloudnote.app.voiceemail.common.utils.DbQueryUtils.concatenateClausesWithAnd;
-import static com.ces.cloudnote.app.voiceemail.common.utils.DbQueryUtils.concatenateClausesWithOr;
-import static com.ces.cloudnote.app.voiceemail.common.utils.DbQueryUtils.getEqualityClause;
+import android.provider.VoicemailContract.Voicemails;
+import android.text.TextUtils;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import android.provider.VoicemailContract.Voicemails;
-import android.text.TextUtils;
+import static com.ces.cloudnote.app.voiceemail.common.utils.DbQueryUtils.concatenateClausesWithAnd;
+import static com.ces.cloudnote.app.voiceemail.common.utils.DbQueryUtils.concatenateClausesWithOr;
+import static com.ces.cloudnote.app.voiceemail.common.utils.DbQueryUtils.getEqualityClause;
 
 /**
  * Factory class to create {@link VoicemailFilter} objects for various filtering needs.

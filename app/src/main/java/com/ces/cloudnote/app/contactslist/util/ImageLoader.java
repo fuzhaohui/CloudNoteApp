@@ -16,9 +16,6 @@
 
 package com.ces.cloudnote.app.contactslist.util;
 
-import java.io.FileDescriptor;
-import java.lang.ref.WeakReference;
-
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
@@ -33,6 +30,9 @@ import android.util.Log;
 import android.widget.ImageView;
 
 import com.ces.cloudnote.app.BuildConfig;
+
+import java.io.FileDescriptor;
+import java.lang.ref.WeakReference;
 
 /**
  * This class wraps up completing some arbitrary long running work when loading a bitmap to an

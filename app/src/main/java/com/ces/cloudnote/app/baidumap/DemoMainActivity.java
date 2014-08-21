@@ -1,11 +1,5 @@
 package com.ces.cloudnote.app.baidumap;
 
-import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import android.annotation.SuppressLint;
 import android.app.ListActivity;
 import android.content.Intent;
@@ -24,6 +18,11 @@ import com.baidu.navisdk.BNaviEngineManager.NaviEngineInitListener;
 import com.baidu.navisdk.BaiduNaviManager;
 import com.baidu.navisdk.util.verify.BNKeyVerifyListener;
 import com.ces.cloudnote.app.R;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class DemoMainActivity extends ListActivity {
 	/** SDK验证密钥 */

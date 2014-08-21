@@ -15,7 +15,6 @@
  *******************************************************************************/
 package com.ces.cloudnote.app.imageloader.widget;
 
-import static com.ces.cloudnote.app.imageloader.Constants.IMAGES;
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
 import android.content.Context;
@@ -30,6 +29,8 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.assist.ImageSize;
 import com.nostra13.universalimageloader.core.assist.SimpleImageLoadingListener;
 import com.nostra13.universalimageloader.core.display.FakeBitmapDisplayer;
+
+import static com.ces.cloudnote.app.imageloader.Constants.IMAGES;
 
 /**
  * Example widget provider

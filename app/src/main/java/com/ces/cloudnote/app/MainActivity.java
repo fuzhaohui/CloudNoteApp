@@ -1,6 +1,6 @@
 package com.ces.cloudnote.app;
 
-import android.app.Activity;
+import android.support.v7.app.ActionBar;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -8,26 +8,27 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract.CommonDataKinds.Phone;
+import android.support.v7.app.ActionBarActivity;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.EditText;
 
 import com.ces.cloudnote.app.baidumap.DemoMainActivity;
 import com.ces.cloudnote.app.bitmapfun.ui.ImageGridActivity;
 import com.ces.cloudnote.app.contactslist.ContactsListActivity;
+import com.ces.cloudnote.app.drawerMenu.DrawerActivity;
 import com.ces.cloudnote.app.fragments.FragmentMainActivity;
 import com.ces.cloudnote.app.imageloader.HomeActivity;
-import com.ces.cloudnote.app.navigation.NavigateActivity;
-import com.ces.cloudnote.app.drawer.DrawerActivity;
+import com.ces.cloudnote.app.navigationMenu.NavigateActivity;
 import com.ces.cloudnote.app.networkusage.NetworkActivity;
 import com.ces.cloudnote.app.newsreader.NewsReaderActivity;
 import com.ces.cloudnote.app.photobyintent.PhotoIntentActivity;
 import com.ces.cloudnote.app.qiyi.QiyiMainActivity;
+import com.ces.cloudnote.app.resideMenu.MenuActivity;
 import com.ces.cloudnote.app.voiceemail.AddVoicemailActivity;
 
 import java.io.File;
@@ -36,7 +37,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 
-public class MainActivity extends Activity implements OnClickListener {
+public class MainActivity extends ActionBarActivity {
 
     public static final String EXTRA_MESSAGE = "com.ces.cloudnote.app.MESSAGE";
     public static final int PICK_CONTACT_REQUEST = 1;
@@ -45,7 +46,9 @@ public class MainActivity extends Activity implements OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-        getActionBar().hide();
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
         Button sendMessageBtn = (Button)findViewById(R.id.send_message_btn);
         sendMessageBtn.setOnClickListener(new OnClickListener(){
@@ -84,7 +87,7 @@ public class MainActivity extends Activity implements OnClickListener {
 
             @Override
             public void onClick(View view) {
-                navigate(view);
+                navigateMenu(view);
             }
         });
         Button photoIntentBtn = (Button)findViewById(R.id.photoIntent_btn);
@@ -180,6 +183,13 @@ public class MainActivity extends Activity implements OnClickListener {
                 demoLayout(view);
             }
         });
+        Button resideMenuBtn = (Button)findViewById(R.id.resideMenu_btn);
+        resideMenuBtn.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                resideMenu(view);
+            }
+        });
     }
 
 
@@ -264,7 +274,7 @@ public class MainActivity extends Activity implements OnClickListener {
         startActivity(intent);
     }
     
-    public void navigate(View view) {
+    public void navigateMenu(View view) {
     	Intent intent = new Intent(this, NavigateActivity.class);
         startActivity(intent);
     }
@@ -319,6 +329,11 @@ public class MainActivity extends Activity implements OnClickListener {
         startActivity(intent);
     }
 
+    public void resideMenu(View view) {
+        Intent intent = new Intent(this, MenuActivity.class);
+        startActivity(intent);
+    }
+
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		// Check which request it is that we're responding to
@@ -349,8 +364,4 @@ public class MainActivity extends Activity implements OnClickListener {
 	    }
 	}
 
-	@Override
-	public void onClick(View v) {
-		Log.v("button id: ", v.getId() + "");
-	}
 }

@@ -14,18 +14,6 @@
 
 package com.ces.cloudnote.app.networkusage;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.List;
-
-import org.xmlpull.v1.XmlPullParserException;
-
-import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -45,6 +33,17 @@ import android.widget.Toast;
 
 import com.ces.cloudnote.app.R;
 import com.ces.cloudnote.app.networkusage.StackOverflowXmlParser.Entry;
+
+import org.xmlpull.v1.XmlPullParserException;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.List;
 
 
 /**

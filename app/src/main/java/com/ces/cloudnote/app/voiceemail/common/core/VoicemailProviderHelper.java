@@ -16,12 +16,12 @@
 
 package com.ces.cloudnote.app.voiceemail.common.core;
 
+import android.net.Uri;
+import android.provider.VoicemailContract;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
-
-import android.net.Uri;
-import android.provider.VoicemailContract;
 
 /**
  * Provides a simple interface to manipulate voicemails within the voicemail content provider.

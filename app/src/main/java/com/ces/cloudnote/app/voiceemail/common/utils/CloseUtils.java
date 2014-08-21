@@ -16,10 +16,10 @@
 
 package com.ces.cloudnote.app.voiceemail.common.utils;
 
+import android.database.Cursor;
+
 import java.io.Closeable;
 import java.io.IOException;
-
-import android.database.Cursor;
 
 /**
  * Utility methods for closing io streams and database cursors.

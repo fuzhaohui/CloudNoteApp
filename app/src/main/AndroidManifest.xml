@@ -72,7 +72,7 @@
         <activity
             android:name=".DisplayMessageActivity"
             android:label="@string/title_activity_display_message"
-            android:theme="@style/WebViewTheme"
+            android:theme="@style/AppTheme"
             android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -113,11 +113,11 @@
         <activity
             android:name=".voiceemail.AddVoicemailActivity"
             android:label="添加声音邮件"
-            android:theme="@style/WebViewTheme"/>
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".imageloader.HomeActivity"
             android:label="加载图片"
-            android:theme="@style/WebViewTheme">
+            android:theme="@style/AppTheme">
         </activity>
         <activity
             android:name=".imageloader.ImageListActivity"
@@ -144,23 +144,23 @@
         </receiver>
 
         <activity
-            android:name=".navigation.NavigateActivity"
+            android:name=".navigationMenu.NavigateActivity"
             android:label="Tab导航菜单" />
         <activity
-            android:name=".navigation.CollectionActivity"
+            android:name=".navigationMenu.CollectionActivity"
             android:label="@string/demo_collection" />
         <activity
             android:name=".photobyintent.PhotoIntentActivity"
             android:label="拍照"
-            android:theme="@style/WebViewTheme"/>
+            android:theme="@style/AppTheme"/>
         <activity
-            android:name=".drawer.DrawerActivity"
+            android:name=".drawerMenu.DrawerActivity"
             android:label="声音邮件"
-            android:theme="@style/WebViewTheme"/>
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"/>
         <activity
             android:name=".newsreader.NewsReaderActivity"
             android:label="新闻阅读"
-            android:theme="@style/WebViewTheme"/>
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".newsreader.ArticleActivity"
             android:label="文章详情"
@@ -168,7 +168,7 @@
         <activity
             android:name=".networkusage.NetworkActivity"
             android:label="网络阅读"
-            android:theme="@style/WebViewTheme"/>
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".networkusage.SettingsActivity"
             android:label="设置" >
@@ -258,17 +258,37 @@
         <activity
             android:name=".WebViewActivity"
             android:label="@string/webView"
-            android:theme="@style/WebViewTheme" >
+            android:theme="@style/AppTheme" >
         </activity>
         <activity
             android:name=".DemoLayoutActivity"
             android:label="@string/title_activity_demo_layout"
-            android:theme="@style/WebViewTheme"
+            android:theme="@style/AppTheme"
             android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.ces.cloudnote.app.MainActivity" />
         </activity>
+        <activity android:name=".resideMenu.MenuActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar"
+            android:label="Reside菜单">
+        </activity>
+
+
+        <activity android:name=".exoplayer.SampleChooserActivity"
+            android:configChanges="keyboardHidden"
+            android:label="ExoPlayer">
+        </activity>
+
+        <activity android:name=".exoplayer.simple.SimplePlayerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="ExoPlayer"
+            android:theme="@style/PlayerTheme"/>
+
+        <activity android:name=".exoplayer.full.FullPlayerActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="ExoPlayer"
+            android:theme="@style/PlayerTheme"/>
     </application>
 
 </manifest>

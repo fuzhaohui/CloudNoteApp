@@ -32,6 +32,12 @@ public class WelcomeActivity extends Activity implements OnViewChangeListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.welcome);
         initView();
+        if(true) {
+            Intent intent = new Intent(WelcomeActivity.this, MainActivity.class);
+            WelcomeActivity.this.startActivity(intent);
+            WelcomeActivity.this.finish();
+            overridePendingTransition(R.anim.zoom_out_enter, R.anim.zoom_out_exit);
+        }
     }
     
 	private void initView() {

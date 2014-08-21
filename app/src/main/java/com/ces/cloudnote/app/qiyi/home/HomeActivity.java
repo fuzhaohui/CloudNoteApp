@@ -1,8 +1,5 @@
 package com.ces.cloudnote.app.qiyi.home;
 
-import java.util.Timer;
-import java.util.TimerTask;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
@@ -23,6 +20,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.ces.cloudnote.app.R;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  * 

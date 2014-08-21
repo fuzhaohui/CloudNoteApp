@@ -1,5 +1,7 @@
 package com.ces.cloudnote.app.utils;
 
+import com.ces.cloudnote.app.beans.FormFile;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
@@ -7,8 +9,6 @@ import java.net.InetAddress;
 import java.net.Socket;
 import java.net.URL;
 import java.util.Map;
-
-import com.ces.cloudnote.app.beans.FormFile;
 
 
 public class SocketHttpRequester {

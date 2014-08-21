@@ -1,12 +1,5 @@
 package com.ces.cloudnote.app.photobyintent;
 
-import java.io.File;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.List;
-
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -26,6 +19,12 @@ import android.widget.ImageView;
 import android.widget.VideoView;
 
 import com.ces.cloudnote.app.R;
+
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
 
 
 public class PhotoIntentActivity extends ActionBarActivity {

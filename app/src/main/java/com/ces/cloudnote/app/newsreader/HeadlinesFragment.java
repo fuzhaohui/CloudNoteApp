@@ -16,9 +16,6 @@
 
 package com.ces.cloudnote.app.newsreader;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.view.View;
@@ -28,6 +25,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.ces.cloudnote.app.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Fragment that displays the news headlines for a particular news category.

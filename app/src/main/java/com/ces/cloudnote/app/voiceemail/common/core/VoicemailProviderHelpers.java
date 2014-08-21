@@ -16,12 +16,6 @@
 
 package com.ces.cloudnote.app.voiceemail.common.core;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.util.ArrayList;
-import java.util.List;
-
 import android.content.ContentResolver;
 import android.content.ContentUris;
 import android.content.ContentValues;
@@ -33,6 +27,12 @@ import android.provider.VoicemailContract.Voicemails;
 import com.ces.cloudnote.app.voiceemail.common.logging.Logger;
 import com.ces.cloudnote.app.voiceemail.common.utils.CloseUtils;
 import com.ces.cloudnote.app.voiceemail.common.utils.DbQueryUtils;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Implementation of the {@link VoicemailProviderHelper} interface.

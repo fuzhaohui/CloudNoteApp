@@ -1,7 +1,5 @@
 package com.ces.cloudnote.app.baidumap;
 
-import java.util.ArrayList;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Build;
@@ -32,6 +30,8 @@ import com.baidu.navisdk.util.common.PreferenceHelper;
 import com.baidu.navisdk.util.common.ScreenUtil;
 import com.baidu.nplatform.comapi.map.MapGLSurfaceView;
 import com.ces.cloudnote.app.R;
+
+import java.util.ArrayList;
 
 public class RoutePlanDemo extends Activity {
 	private RoutePlanModel mRoutePlanModel = null;

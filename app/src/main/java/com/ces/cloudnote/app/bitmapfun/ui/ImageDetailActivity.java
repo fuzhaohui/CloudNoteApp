@@ -17,14 +17,14 @@
 package com.ces.cloudnote.app.bitmapfun.ui;
 
 import android.annotation.TargetApi;
-import android.app.ActionBar;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.app.NavUtils;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
 import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -40,7 +40,7 @@ import com.ces.cloudnote.app.bitmapfun.util.ImageCache;
 import com.ces.cloudnote.app.bitmapfun.util.ImageFetcher;
 import com.ces.cloudnote.app.bitmapfun.util.Utils;
 
-public class ImageDetailActivity extends FragmentActivity implements OnClickListener {
+public class ImageDetailActivity extends ActionBarActivity implements OnClickListener {
     private static final String IMAGE_CACHE_DIR = "images";
     public static final String EXTRA_IMAGE = "extra_image";
 
@@ -93,7 +93,7 @@ public class ImageDetailActivity extends FragmentActivity implements OnClickList
         // Enable some additional newer visibility and ActionBar features to create a more
         // immersive photo viewing experience
         if (Utils.hasHoneycomb()) {
-            final ActionBar actionBar = getActionBar();
+            final ActionBar actionBar = getSupportActionBar();
 
             // Hide title text and set home as up
             actionBar.setDisplayShowTitleEnabled(false);

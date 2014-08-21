@@ -1,8 +1,5 @@
 package com.ces.cloudnote.app.baidumap;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,11 +9,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.baidu.navisdk.BaiduNaviManager;
 import com.baidu.navisdk.BNaviPoint;
+import com.baidu.navisdk.BaiduNaviManager;
 import com.baidu.navisdk.BaiduNaviManager.OnStartNavigationListener;
 import com.baidu.navisdk.comapi.routeplan.RoutePlanParams.NE_RoutePlan_Mode;
 import com.ces.cloudnote.app.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * GPS导航Demo

@@ -23,6 +23,7 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.NavUtils;
+import android.support.v7.app.ActionBarActivity;
 import android.view.MenuItem;
 
 import com.ces.cloudnote.app.BuildConfig;
@@ -31,7 +32,7 @@ import com.ces.cloudnote.app.contactslist.util.Utils;
 /**
  * This class defines a simple FragmentActivity as the parent of {@link ContactDetailFragment}.
  */
-public class ContactDetailActivity extends FragmentActivity {
+public class ContactDetailActivity extends ActionBarActivity {
     // Defines a tag for identifying the single fragment that this activity holds
     private static final String TAG = "ContactDetailActivity";
 
@@ -50,7 +51,7 @@ public class ContactDetailActivity extends FragmentActivity {
             // For OS versions honeycomb and higher use action bar
             if (Utils.hasHoneycomb()) {
                 // Enables action bar "up" navigation
-                getActionBar().setDisplayHomeAsUpEnabled(true);
+                getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             }
 
             // Fetch the data Uri from the intent provided to this activity

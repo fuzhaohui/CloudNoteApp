@@ -1,12 +1,12 @@
 package com.ces.cloudnote.app;
 
-import java.util.ArrayList;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
+
+import java.util.ArrayList;
 
 public class ReceiveActivity extends Activity {
 

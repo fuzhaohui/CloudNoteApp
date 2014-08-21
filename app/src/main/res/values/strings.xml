@@ -128,6 +128,7 @@
     <string name="no_network_connection_toast">未连接到网络</string>
     <string name="phtotprocessing">照片处理</string>
     <string name="webView">嵌入网页</string>
+    <string name="resideMenu">Reside菜单</string>
     <string name="baiduMap">百度地图</string>
     <string name="sdk_name">Baidu Navigation SDK Demo</string>
 
@@ -185,5 +186,19 @@
     <string name="change_to_traditional_tips">已切换为繁体，请在地图图层页看效果</string>
     <string name="title_activity_demo_layout">\@string/test</string>
     <string name="hello_world">Hello world!</string>
+
+
+    <string name="enable_background_audio">Play in background</string>
+    <string name="video">Video</string>
+    <string name="audio">Audio</string>
+    <string name="text">Text</string>
+    <string name="logging">Logging</string>
+    <string name="logging_normal">Normal</string>
+    <string name="logging_verbose">Verbose</string>
+    <string name="retry">Retry</string>
+    <string name="off">[off]</string>
+    <string name="on">[on]</string>
+    <string name="drm_not_supported">Protected content not supported on API levels below 18</string>
+    <string name="failed">Playback failed</string>
 
 </resources>

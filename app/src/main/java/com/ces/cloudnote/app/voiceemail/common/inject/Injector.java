@@ -16,10 +16,10 @@
 
 package com.ces.cloudnote.app.voiceemail.common.inject;
 
+import android.app.Activity;
+
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
-
-import android.app.Activity;
 
 /**
  * Very lightweight form of injection, inspired by RoboGuice, for injecting common ui elements.

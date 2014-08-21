@@ -17,11 +17,6 @@
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
 
-    <style name="WebViewTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-
-
-    </style>
-
     <style name="NewsReaderStyle" parent="android:Theme.Light.NoTitleBar">
     </style>
 
@@ -127,6 +122,12 @@
         <item name="android:drawSelectorOnTop">true</item>
         <item name="android:listSelector">@drawable/photogrid_list_selector</item>
     </style>
-   
+
+    <style name="fragment_text">
+        <item name="android:textColor">#ffacacac</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+
+
 
 </resources>
