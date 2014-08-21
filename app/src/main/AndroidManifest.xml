@@ -72,6 +72,7 @@
         <activity
             android:name=".DisplayMessageActivity"
             android:label="@string/title_activity_display_message"
+            android:theme="@style/WebViewTheme"
             android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -111,10 +112,12 @@
         </activity>
         <activity
             android:name=".voiceemail.AddVoicemailActivity"
-            android:label="添加声音邮件" />
+            android:label="添加声音邮件"
+            android:theme="@style/WebViewTheme"/>
         <activity
             android:name=".imageloader.HomeActivity"
-            android:label="加载图片" >
+            android:label="加载图片"
+            android:theme="@style/WebViewTheme">
         </activity>
         <activity
             android:name=".imageloader.ImageListActivity"
@@ -148,20 +151,24 @@
             android:label="@string/demo_collection" />
         <activity
             android:name=".photobyintent.PhotoIntentActivity"
-            android:label="拍照" />
+            android:label="拍照"
+            android:theme="@style/WebViewTheme"/>
         <activity
             android:name=".drawer.DrawerActivity"
-            android:label="声音邮件" />
+            android:label="声音邮件"
+            android:theme="@style/WebViewTheme"/>
         <activity
             android:name=".newsreader.NewsReaderActivity"
-            android:label="新闻阅读" />
+            android:label="新闻阅读"
+            android:theme="@style/WebViewTheme"/>
         <activity
             android:name=".newsreader.ArticleActivity"
             android:label="文章详情"
             android:theme="@style/NewsReaderStyle_NoActionBar" />
         <activity
             android:name=".networkusage.NetworkActivity"
-            android:label="网络阅读" />
+            android:label="网络阅读"
+            android:theme="@style/WebViewTheme"/>
         <activity
             android:name=".networkusage.SettingsActivity"
             android:label="设置" >

@@ -36,6 +36,7 @@ import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -61,7 +62,7 @@ import com.ces.cloudnote.app.networkusage.StackOverflowXmlParser.Entry;
  * o Monitors preferences and the device's network connection to determine whether
  *   to refresh the WebView content.
  */
-public class NetworkActivity extends Activity {
+public class NetworkActivity extends ActionBarActivity {
     public static final String WIFI = "Wi-Fi";
     public static final String ANY = "Any";
     private static final String URL =

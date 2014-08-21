@@ -45,6 +45,8 @@ public class MainActivity extends Activity implements OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+        getActionBar().hide();
+
         Button sendMessageBtn = (Button)findViewById(R.id.send_message_btn);
         sendMessageBtn.setOnClickListener(new OnClickListener(){
 
