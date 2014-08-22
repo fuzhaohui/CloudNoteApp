@@ -128,6 +128,8 @@
         <item name="android:textSize">25sp</item>
     </style>
 
+    <style name="LightboxTheme.NoTitleBar" parent="@android:style/Theme.NoTitleBar">
+    </style>
 
 
 </resources>

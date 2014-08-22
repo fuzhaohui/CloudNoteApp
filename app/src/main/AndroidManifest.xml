@@ -283,6 +283,10 @@
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="ExoPlayer"
             android:theme="@style/PlayerTheme"/>
+        <activity
+            android:name=".photo.PhotoProcessingActivity"
+            android:theme="@style/LightboxTheme.NoTitleBar" >
+        </activity>
     </application>
 
 </manifest>

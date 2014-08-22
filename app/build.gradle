@@ -1,6 +1,6 @@
 apply plugin: 'com.android.application'
 
-def extension = android {
+android {
     signingConfigs {
         app {
             keyAlias 'sdkdemotest'
@@ -21,17 +21,24 @@ def extension = android {
             runProguard false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
             signingConfig signingConfigs.app
+            ndk {
+                moduleName "jnimain"
+                abiFilters "armeabi", "armeabi-v7a"
+            }
         }
         debug {
             runProguard false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
             signingConfig signingConfigs.app
+            ndk {
+                moduleName "jnimain"
+                abiFilters "armeabi", "armeabi-v7a"
+            }
         }
     }
     productFlavors {
     }
 }
-extension
 
 dependencies {
     /*compile files('libs/ksoap2-3.0.0-.jar')*/
@@ -50,3 +57,4 @@ dependencies {
     compile 'com.android.support:support-v4:20.0.0+'
     compile 'com.android.support:appcompat-v7:20.0.0+'
 }
+
