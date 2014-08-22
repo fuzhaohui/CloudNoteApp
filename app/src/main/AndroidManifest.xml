@@ -139,9 +139,11 @@
 
         <activity
             android:name=".navigationMenu.NavigateActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
             android:label="Tab导航菜单" />
         <activity
             android:name=".navigationMenu.CollectionActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
             android:label="@string/demo_collection" />
         <activity
             android:name=".photobyintent.PhotoIntentActivity"
@@ -269,17 +271,17 @@
         </activity>
 
 
-        <activity android:name=".exoplayer.SampleChooserActivity"
+        <activity android:name=".exoPlayer.SampleChooserActivity"
             android:configChanges="keyboardHidden"
             android:label="ExoPlayer">
         </activity>
 
-        <activity android:name=".exoplayer.simple.SimplePlayerActivity"
+        <activity android:name=".exoPlayer.simple.SimplePlayerActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="ExoPlayer"
             android:theme="@style/PlayerTheme"/>
 
-        <activity android:name=".exoplayer.full.FullPlayerActivity"
+        <activity android:name=".exoPlayer.full.FullPlayerActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="ExoPlayer"
             android:theme="@style/PlayerTheme"/>
