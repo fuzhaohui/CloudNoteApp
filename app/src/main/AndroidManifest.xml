@@ -11,7 +11,6 @@
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.WRITE_SMS" />
     <uses-permission android:name="com.android.voicemail.permission.ADD_VOICEMAIL" />
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -46,7 +45,7 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme">
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -66,7 +65,7 @@
         <activity
             android:name=".DisplayMessageActivity"
             android:label="@string/title_activity_display_message"
-            android:theme="@style/AppTheme"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
             android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -78,7 +77,7 @@
         </activity>
         <activity
             android:name=".WelcomeActivity"
-            android:theme="@style/AppTheme"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -90,7 +89,7 @@
             android:name=".contactslist.ContactsListActivity"
             android:icon="@drawable/ic_launcher"
             android:label="@string/activity_contacts_list"
-            android:theme="@style/AppTheme" >
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
@@ -108,11 +107,11 @@
         <activity
             android:name=".voiceemail.AddVoicemailActivity"
             android:label="添加声音邮件"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"/>
         <activity
             android:name=".imageloader.HomeActivity"
             android:label="加载图片"
-            android:theme="@style/AppTheme">
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
         </activity>
         <activity
             android:name=".imageloader.ImageListActivity"
@@ -147,7 +146,7 @@
         <activity
             android:name=".photobyintent.PhotoIntentActivity"
             android:label="拍照"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"/>
         <activity
             android:name=".drawerMenu.DrawerActivity"
             android:label="声音邮件"
@@ -155,7 +154,7 @@
         <activity
             android:name=".newsreader.NewsReaderActivity"
             android:label="新闻阅读"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"/>
         <activity
             android:name=".newsreader.ArticleActivity"
             android:label="文章详情"
@@ -163,7 +162,7 @@
         <activity
             android:name=".networkusage.NetworkActivity"
             android:label="网络阅读"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"/>
         <activity
             android:name=".networkusage.SettingsActivity"
             android:label="设置" >
@@ -203,7 +202,7 @@
         </activity>
         <activity
             android:name=".bitmapfun.ui.ImageGridActivity"
-            android:theme="@style/AppTheme">
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
         </activity>
 
         <meta-data
@@ -253,12 +252,12 @@
         <activity
             android:name=".WebViewActivity"
             android:label="@string/webView"
-            android:theme="@style/AppTheme" >
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" >
         </activity>
         <activity
             android:name=".DemoLayoutActivity"
             android:label="@string/title_activity_demo_layout"
-            android:theme="@style/AppTheme"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
             android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

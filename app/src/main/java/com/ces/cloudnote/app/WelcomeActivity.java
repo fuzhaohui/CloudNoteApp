@@ -1,8 +1,14 @@
 package com.ces.cloudnote.app;
 
 import android.app.Activity;
+import android.content.ContentValues;
+import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.DatabaseUtils;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
@@ -12,6 +18,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
+import com.ces.cloudnote.app.beans.Person;
 import com.ces.cloudnote.app.layout.MyScrollLayout;
 import com.ces.cloudnote.app.utils.OnViewChangeListener;
 
@@ -32,6 +39,46 @@ public class WelcomeActivity extends Activity implements OnViewChangeListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.welcome);
         initView();
+        //SQLiteDatabase database = new SQLiteDatabase();
+        SQLiteDatabase db = openOrCreateDatabase("test.db", Context.MODE_PRIVATE, null);
+        db.execSQL("DROP TABLE IF EXISTS person");
+        //创建person表
+        db.execSQL("CREATE TABLE person (_id INTEGER PRIMARY KEY AUTOINCREMENT, name VARCHAR, age SMALLINT)");
+        Person person = new Person();
+        person.name = "john";
+        person.age = 30;
+        //插入数据
+        db.execSQL("INSERT INTO person VALUES (NULL, ?, ?)", new Object[]{person.name, person.age});
+
+        person.name = "david";
+        person.age = 33;
+        //ContentValues以键值对的形式存放数据
+        ContentValues cv = new ContentValues();
+        cv.put("name", person.name);
+        cv.put("age", person.age);
+        //插入ContentValues中的数据
+        db.insert("person", null, cv);
+
+        cv = new ContentValues();
+        cv.put("age", 35);
+        //更新数据
+        db.update("person", cv, "name = ?", new String[]{"john"});
+
+        Cursor c = db.rawQuery("SELECT * FROM person WHERE age >= ?", new String[]{"33"});
+        while (c.moveToNext()) {
+            int _id = c.getInt(c.getColumnIndex("_id"));
+            String name = c.getString(c.getColumnIndex("name"));
+            int age = c.getInt(c.getColumnIndex("age"));
+            Log.i("db", "_id=>" + _id + ", name=>" + name + ", age=>" + age);
+        }
+        c.close();
+
+        //删除数据
+        db.delete("person", "age < ?", new String[]{"35"});
+
+        //关闭当前数据库
+        db.close();
+
         if(true) {
             Intent intent = new Intent(WelcomeActivity.this, MainActivity.class);
             WelcomeActivity.this.startActivity(intent);
@@ -92,6 +139,8 @@ public class WelcomeActivity extends Activity implements OnViewChangeListener {
 						WelcomeActivity.this.startActivity(intent);
 						WelcomeActivity.this.finish();
 						overridePendingTransition(R.anim.zoom_out_enter, R.anim.zoom_out_exit);
+
+
 					}
 				});
 				break;
@@ -101,10 +150,10 @@ public class WelcomeActivity extends Activity implements OnViewChangeListener {
 
 	@Override
 	public void OnViewChange(int position) {
-		setcurrentPoint(position);
+		setCurrentPoint(position);
 	}
 
-	private void setcurrentPoint(int position) {
+	private void setCurrentPoint(int position) {
 		if(position < 0 || position > count -1 || currentItem == position) {
 			return;
 		}

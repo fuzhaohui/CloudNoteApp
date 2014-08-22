@@ -1,6 +1,5 @@
 package com.ces.cloudnote.app;
 
-import android.app.Activity;
 import android.support.v7.app.ActionBar;
 import android.content.Context;
 import android.content.Intent;
@@ -38,7 +37,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 
-public class MainActivity extends Activity implements OnClickListener {
+public class MainActivity extends ActionBarActivity implements OnClickListener {
 
     public static final String EXTRA_MESSAGE = "com.ces.cloudnote.app.MESSAGE";
     public static final int PICK_CONTACT_REQUEST = 1;
@@ -48,8 +47,8 @@ public class MainActivity extends Activity implements OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-        //ActionBar actionBar = getSupportActionBar();
-        //actionBar.hide();
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.show();
 
         Button sendMessageBtn = (Button)findViewById(R.id.send_message_btn);
         sendMessageBtn.setOnClickListener(new OnClickListener(){
@@ -83,8 +82,8 @@ public class MainActivity extends Activity implements OnClickListener {
                 imageloader(view);
             }
         });
-        Button naviageMenuBtn = (Button)findViewById(R.id.navigateMenu_btn);
-        naviageMenuBtn.setOnClickListener(new OnClickListener(){
+        Button navigateMenuBtn = (Button)findViewById(R.id.navigateMenu_btn);
+        navigateMenuBtn.setOnClickListener(new OnClickListener(){
 
             @Override
             public void onClick(View view) {
@@ -96,7 +95,7 @@ public class MainActivity extends Activity implements OnClickListener {
 
             @Override
             public void onClick(View view) {
-                photointent(view);
+                photoIntent(view);
             }
         });
         Button drawerMenuBtn = (Button)findViewById(R.id.drawerMenu_btn);
@@ -280,7 +279,7 @@ public class MainActivity extends Activity implements OnClickListener {
         startActivity(intent);
     }
     
-    public void photointent(View view) {
+    public void photoIntent(View view) {
     	Intent intent = new Intent(this, PhotoIntentActivity.class);
     	startActivity(intent);
     }
