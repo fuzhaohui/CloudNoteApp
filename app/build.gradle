@@ -2,12 +2,12 @@ apply plugin: 'com.android.application'
 
 android {
     signingConfigs {
-        app {
+        /*app {
             keyAlias 'sdkdemotest'
             keyPassword '123456'
             storeFile file('D:/Git_Repositories/CloudNoteApp/app/sdkdemotest.keystore')
             storePassword '123456'
-        }
+        }*/
     }
     compileSdkVersion 19
     buildToolsVersion '20.0.0'
@@ -20,7 +20,7 @@ android {
         release {
             runProguard false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
-            signingConfig signingConfigs.app
+            /*signingConfig signingConfigs.app*/
             ndk {
                 moduleName "jnimain"
                 abiFilters "armeabi", "armeabi-v7a"
@@ -29,7 +29,7 @@ android {
         debug {
             runProguard false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
-            signingConfig signingConfigs.app
+            /*signingConfig signingConfigs.app*/
             ndk {
                 moduleName "jnimain"
                 abiFilters "armeabi", "armeabi-v7a"
