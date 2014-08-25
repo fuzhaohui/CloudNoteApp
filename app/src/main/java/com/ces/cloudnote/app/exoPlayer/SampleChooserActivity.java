@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.ces.cloudnote.app.exoplayer;
+package com.ces.cloudnote.app.exoPlayer;
 
 import android.app.Activity;
 import android.content.Context;
@@ -31,9 +31,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ces.cloudnote.app.R;
-import com.ces.cloudnote.app.exoplayer.Samples.Sample;
-import com.ces.cloudnote.app.exoplayer.full.FullPlayerActivity;
-import com.ces.cloudnote.app.exoplayer.simple.SimplePlayerActivity;
+import com.ces.cloudnote.app.exoPlayer.Samples.Sample;
+import com.ces.cloudnote.app.exoPlayer.full.FullPlayerActivity;
+import com.ces.cloudnote.app.exoPlayer.simple.SimplePlayerActivity;
 import com.google.android.exoplayer.util.Util;
 
 /**

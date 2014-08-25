@@ -13,14 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.ces.cloudnote.app.exoplayer.full.player;
+package com.ces.cloudnote.app.exoPlayer.full.player;
 
 import com.google.android.exoplayer.FrameworkSampleSource;
 import com.google.android.exoplayer.MediaCodecAudioTrackRenderer;
 import com.google.android.exoplayer.MediaCodecVideoTrackRenderer;
 import com.google.android.exoplayer.TrackRenderer;
-import com.ces.cloudnote.app.exoplayer.full.player.DemoPlayer.RendererBuilder;
-import com.ces.cloudnote.app.exoplayer.full.player.DemoPlayer.RendererBuilderCallback;
+import com.ces.cloudnote.app.exoPlayer.full.player.DemoPlayer.RendererBuilder;
+import com.ces.cloudnote.app.exoPlayer.full.player.DemoPlayer.RendererBuilderCallback;
 
 import android.content.Context;
 import android.media.MediaCodec;

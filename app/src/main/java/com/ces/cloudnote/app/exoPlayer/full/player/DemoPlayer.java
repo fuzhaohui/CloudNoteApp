@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.ces.cloudnote.app.exoplayer.full.player;
+package com.ces.cloudnote.app.exoPlayer.full.player;
 
 import com.google.android.exoplayer.DummyTrackRenderer;
 import com.google.android.exoplayer.ExoPlaybackException;
@@ -40,7 +40,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
  * A wrapper around {@link ExoPlayer} that provides a higher level interface. It can be prepared
- * with one of a number of {@link com.ces.cloudnote.app.exoplayer.full.player.DemoPlayer.RendererBuilder} classes to suit different use cases (e.g. DASH,
+ * with one of a number of {@link com.ces.cloudnote.app.exoPlayer.full.player.DemoPlayer.RendererBuilder} classes to suit different use cases (e.g. DASH,
  * SmoothStreaming and so on).
  */
 public class DemoPlayer implements ExoPlayer.Listener, ChunkSampleSource.EventListener,
@@ -62,25 +62,25 @@ public class DemoPlayer implements ExoPlayer.Listener, ChunkSampleSource.EventLi
   }
 
   /**
-   * A callback invoked by a {@link com.ces.cloudnote.app.exoplayer.full.player.DemoPlayer.RendererBuilder}.
+   * A callback invoked by a {@link com.ces.cloudnote.app.exoPlayer.full.player.DemoPlayer.RendererBuilder}.
    */
   public interface RendererBuilderCallback {
     /**
-     * Invoked with the results from a {@link com.ces.cloudnote.app.exoplayer.full.player.DemoPlayer.RendererBuilder}.
+     * Invoked with the results from a {@link com.ces.cloudnote.app.exoPlayer.full.player.DemoPlayer.RendererBuilder}.
      *
-     * @param trackNames The names of the available tracks, indexed by {@link com.ces.cloudnote.app.exoplayer.full.player.DemoPlayer} TYPE_*
+     * @param trackNames The names of the available tracks, indexed by {@link com.ces.cloudnote.app.exoPlayer.full.player.DemoPlayer} TYPE_*
      *     constants. May be null if the track names are unknown. An individual element may be null
      *     if the track names are unknown for the corresponding type.
      * @param multiTrackSources Sources capable of switching between multiple available tracks,
-     *     indexed by {@link com.ces.cloudnote.app.exoplayer.full.player.DemoPlayer} TYPE_* constants. May be null if there are no types with
+     *     indexed by {@link com.ces.cloudnote.app.exoPlayer.full.player.DemoPlayer} TYPE_* constants. May be null if there are no types with
      *     multiple tracks. An individual element may be null if it does not have multiple tracks.
-     * @param renderers Renderers indexed by {@link com.ces.cloudnote.app.exoplayer.full.player.DemoPlayer} TYPE_* constants. An individual
+     * @param renderers Renderers indexed by {@link com.ces.cloudnote.app.exoPlayer.full.player.DemoPlayer} TYPE_* constants. An individual
      *     element may be null if there do not exist tracks of the corresponding type.
      */
     void onRenderers(String[][] trackNames, MultiTrackChunkSource[] multiTrackSources,
                      TrackRenderer[] renderers);
     /**
-     * Invoked if a {@link com.ces.cloudnote.app.exoplayer.full.player.DemoPlayer.RendererBuilder} encounters an error.
+     * Invoked if a {@link com.ces.cloudnote.app.exoPlayer.full.player.DemoPlayer.RendererBuilder} encounters an error.
      *
      * @param e Describes the error.
      */
@@ -101,7 +101,7 @@ public class DemoPlayer implements ExoPlayer.Listener, ChunkSampleSource.EventLi
    * <p>
    * These errors are not visible to the user, and hence this listener is provided for
    * informational purposes only. Note however that an internal error may cause a fatal
-   * error if the player fails to recover. If this happens, {@link com.ces.cloudnote.app.exoplayer.full.player.DemoPlayer.Listener#onError(Exception)}
+   * error if the player fails to recover. If this happens, {@link com.ces.cloudnote.app.exoPlayer.full.player.DemoPlayer.Listener#onError(Exception)}
    * will be invoked.
    */
   public interface InternalErrorListener {

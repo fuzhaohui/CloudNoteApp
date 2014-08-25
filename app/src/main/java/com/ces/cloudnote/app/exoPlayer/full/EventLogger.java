@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.ces.cloudnote.app.exoplayer.full;
+package com.ces.cloudnote.app.exoPlayer.full;
 
 import com.google.android.exoplayer.ExoPlayer;
 import com.google.android.exoplayer.MediaCodecAudioTrackRenderer.AudioTrackInitializationException;
 import com.google.android.exoplayer.MediaCodecTrackRenderer.DecoderInitializationException;
-import com.ces.cloudnote.app.exoplayer.full.player.DemoPlayer;
+import com.ces.cloudnote.app.exoPlayer.full.player.DemoPlayer;
 import com.google.android.exoplayer.util.VerboseLogUtil;
 
 import android.media.MediaCodec.CryptoException;

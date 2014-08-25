@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.ces.cloudnote.app.exoplayer.full;
+package com.ces.cloudnote.app.exoPlayer.full;
 
-import com.ces.cloudnote.app.exoplayer.DemoUtil;
+import com.ces.cloudnote.app.exoPlayer.DemoUtil;
 import com.google.android.exoplayer.drm.MediaDrmCallback;
 
 import android.annotation.TargetApi;

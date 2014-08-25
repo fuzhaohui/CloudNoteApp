@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.ces.cloudnote.app.exoplayer.simple;
+package com.ces.cloudnote.app.exoPlayer.simple;
 
 import com.ces.cloudnote.app.R;
 import com.google.android.exoplayer.ExoPlaybackException;
@@ -22,7 +22,7 @@ import com.google.android.exoplayer.MediaCodecAudioTrackRenderer;
 import com.google.android.exoplayer.MediaCodecTrackRenderer.DecoderInitializationException;
 import com.google.android.exoplayer.MediaCodecVideoTrackRenderer;
 import com.google.android.exoplayer.VideoSurfaceView;
-import com.ces.cloudnote.app.exoplayer.DemoUtil;
+import com.ces.cloudnote.app.exoPlayer.DemoUtil;
 import com.google.android.exoplayer.util.PlayerControl;
 
 import android.app.Activity;

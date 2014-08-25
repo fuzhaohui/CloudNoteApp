@@ -13,17 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.ces.cloudnote.app.exoplayer.full;
+package com.ces.cloudnote.app.exoPlayer.full;
 
 import com.ces.cloudnote.app.R;
 import com.google.android.exoplayer.ExoPlayer;
 import com.google.android.exoplayer.VideoSurfaceView;
-import com.ces.cloudnote.app.exoplayer.DemoUtil;
-import com.ces.cloudnote.app.exoplayer.full.player.DashVodRendererBuilder;
-import com.ces.cloudnote.app.exoplayer.full.player.DefaultRendererBuilder;
-import com.ces.cloudnote.app.exoplayer.full.player.DemoPlayer;
-import com.ces.cloudnote.app.exoplayer.full.player.DemoPlayer.RendererBuilder;
-import com.ces.cloudnote.app.exoplayer.full.player.SmoothStreamingRendererBuilder;
+import com.ces.cloudnote.app.exoPlayer.DemoUtil;
+import com.ces.cloudnote.app.exoPlayer.full.player.DashVodRendererBuilder;
+import com.ces.cloudnote.app.exoPlayer.full.player.DefaultRendererBuilder;
+import com.ces.cloudnote.app.exoPlayer.full.player.DemoPlayer;
+import com.ces.cloudnote.app.exoPlayer.full.player.DemoPlayer.RendererBuilder;
+import com.ces.cloudnote.app.exoPlayer.full.player.SmoothStreamingRendererBuilder;
 import com.google.android.exoplayer.util.VerboseLogUtil;
 
 import android.app.Activity;

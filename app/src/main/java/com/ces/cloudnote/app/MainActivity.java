@@ -26,6 +26,7 @@ import com.ces.cloudnote.app.imageloader.HomeActivity;
 import com.ces.cloudnote.app.navigationMenu.NavigateActivity;
 import com.ces.cloudnote.app.networkusage.NetworkActivity;
 import com.ces.cloudnote.app.newsreader.NewsReaderActivity;
+import com.ces.cloudnote.app.photo.PhotoProcessingActivity;
 import com.ces.cloudnote.app.photobyintent.PhotoIntentActivity;
 import com.ces.cloudnote.app.qiyi.QiyiMainActivity;
 import com.ces.cloudnote.app.resideMenu.MenuActivity;
@@ -166,7 +167,7 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
         photoProcessingBtn.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                photoProcessing(view);
             }
         });
         Button webViewBtn = (Button)findViewById(R.id.webView_btn);
@@ -331,6 +332,11 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
 
     public void resideMenu(View view) {
         Intent intent = new Intent(this, MenuActivity.class);
+        startActivity(intent);
+    }
+
+    public void photoProcessing(View view) {
+        Intent intent = new Intent(this, PhotoProcessingActivity.class);
         startActivity(intent);
     }
 

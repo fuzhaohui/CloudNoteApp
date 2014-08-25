@@ -186,8 +186,6 @@
     <string name="change_to_traditional_tips">已切换为繁体，请在地图图层页看效果</string>
     <string name="title_activity_demo_layout">\@string/test</string>
     <string name="hello_world">Hello world!</string>
-
-
     <string name="enable_background_audio">Play in background</string>
     <string name="video">Video</string>
     <string name="audio">Audio</string>
@@ -200,7 +198,6 @@
     <string name="on">[on]</string>
     <string name="drm_not_supported">Protected content not supported on API levels below 18</string>
     <string name="failed">Playback failed</string>
-
     <string name="toast_hint_gallery">Pick from gallery</string>
     <string name="toast_hint_camera">Use the camera</string>
     <string name="toast_hint_filter">Apply photo effects</string>
@@ -228,14 +225,15 @@
     <string name="edit_action_rotate_180">Rotate 180°</string>
 
     <!-- Progress Dialogs -->
-    <string name="reverting_to_original">Reverting to original&#8230;</string>
-    <string name="applying_filter">Applying %s filter&#8230;</string>
-    <string name="flipping">Flipping horizontally&#8230;</string>
-    <string name="rotating_90_right">Rotating 90° right&#8230;</string>
-    <string name="rotating_90_left">Rotating 90° left&#8230;</string>
-    <string name="rotating_180">Rotating 180°&#8230;</string>
+    <string name="reverting_to_original">Reverting to original…</string>
+    <string name="applying_filter">Applying %s filter…</string>
+    <string name="flipping">Flipping horizontally…</string>
+    <string name="rotating_90_right">Rotating 90° right…</string>
+    <string name="rotating_90_left">Rotating 90° left…</string>
+    <string name="rotating_180">Rotating 180°…</string>
 
     <!-- Save action -->
     <string name="saved_photo_toast_message">Saved photo to %s</string>
+    <string name="title_activity_show_case">ShowCaseActivity</string>
 
 </resources>

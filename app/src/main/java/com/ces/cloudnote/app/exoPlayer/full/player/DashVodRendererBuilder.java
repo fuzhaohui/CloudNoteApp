@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.ces.cloudnote.app.exoplayer.full.player;
+package com.ces.cloudnote.app.exoPlayer.full.player;
 
 import com.google.android.exoplayer.DefaultLoadControl;
 import com.google.android.exoplayer.LoadControl;
@@ -35,9 +35,9 @@ import com.google.android.exoplayer.dash.mpd.MediaPresentationDescription;
 import com.google.android.exoplayer.dash.mpd.MediaPresentationDescriptionFetcher;
 import com.google.android.exoplayer.dash.mpd.Period;
 import com.google.android.exoplayer.dash.mpd.Representation;
-import com.ces.cloudnote.app.exoplayer.DemoUtil;
-import com.ces.cloudnote.app.exoplayer.full.player.DemoPlayer.RendererBuilder;
-import com.ces.cloudnote.app.exoplayer.full.player.DemoPlayer.RendererBuilderCallback;
+import com.ces.cloudnote.app.exoPlayer.DemoUtil;
+import com.ces.cloudnote.app.exoPlayer.full.player.DemoPlayer.RendererBuilder;
+import com.ces.cloudnote.app.exoPlayer.full.player.DemoPlayer.RendererBuilderCallback;
 import com.google.android.exoplayer.drm.DrmSessionManager;
 import com.google.android.exoplayer.drm.MediaDrmCallback;
 import com.google.android.exoplayer.drm.StreamingDrmSessionManager;
