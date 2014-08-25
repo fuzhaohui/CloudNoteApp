@@ -1,0 +1,20 @@
+apply plugin: 'com.android.library'
+
+dependencies {
+    compile project(':external:ActionBar-PullToRefresh-Library')
+    compile ('com.actionbarsherlock:actionbarsherlock:4.4.0@aar') {
+        // Need to specifically exclude this as it is specified in ActionBarSherlock pom
+        exclude group: 'com.google.android', module: 'support-v4'
+    }
+    compile 'com.android.support:support-v4:20.0.0'
+}
+
+android {
+    compileSdkVersion Integer.parseInt(project.ANDROID_BUILD_SDK_VERSION)
+    buildToolsVersion project.ANDROID_BUILD_TOOLS_VERSION
+
+    defaultConfig {
+        minSdkVersion 7
+        targetSdkVersion Integer.parseInt(project.ANDROID_BUILD_TARGET_SDK_VERSION)
+    }
+}
