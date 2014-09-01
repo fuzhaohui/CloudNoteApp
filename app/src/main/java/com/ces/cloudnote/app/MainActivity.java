@@ -1,5 +1,6 @@
 package com.ces.cloudnote.app;
 
+import android.os.Build;
 import android.support.v7.app.ActionBar;
 import android.content.Context;
 import android.content.Intent;
@@ -191,6 +192,13 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
                 resideMenu(view);
             }
         });
+
+        // Make sure we're running on Honeycomb or higher to use ActionBar APIs
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+            // For the main activity, make sure the app icon in the action bar
+            // does not behave as a button
+            getSupportActionBar().setHomeButtonEnabled(false);
+        }
     }
 
 
@@ -374,4 +382,6 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
     public void onClick(View v) {
 
     }
+
+
 }
