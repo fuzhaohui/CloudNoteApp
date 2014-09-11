@@ -293,10 +293,6 @@
             android:name=".photo.PhotoProcessingActivity"
             android:theme="@style/LightboxTheme.NoTitleBar" >
         </activity>
-        <activity
-            android:name=".PullToRefreshActivity"
-            android:label="@string/title_activity_show_case" >
-        </activity>
     </application>
 
 </manifest>

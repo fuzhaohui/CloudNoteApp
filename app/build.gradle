@@ -54,9 +54,6 @@ dependencies {
     /*compile project(':external:googlemediaframework')
     compile project(':external:cards')
     compile project(':external:silk')*/
-    compile project(':external:actionbarcompat')
-    compile project(':external:actionbarsherlock')
-    compile project(':external:ActionBar-PullToRefresh-Library')
     compile 'com.navercorp.pulltorefresh:parent:3.2.3'
     compile 'com.navercorp.pulltorefresh:extras:3.2.3'
     compile 'com.android.support:support-v4:20.0.0'
