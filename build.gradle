@@ -1,4 +1,19 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+println "-------------------------------------------------"
+println "Build ResideMenu with:\n\tbuildToolsVersion = " + System.properties['buildToolsVersion']
+println "\tandroidGradlePluginVersion = " + System.properties['androidGradlePluginVersion']
+println "\tfile.encoding = " + System.properties['file.encoding']
+println "\tCharset.defaultCharset() = " + java.nio.charset.Charset.defaultCharset().toString()
+println "-------------------------------------------------\n"
+
+
+ext {
+    compileSdkVersion = 19
+    buildToolsVersion = System.properties['buildToolsVersion']
+    minSdkVersion = 8
+    targetSdkVersion = 19
+}
+
 buildscript {
     repositories {
         mavenCentral()
@@ -11,5 +26,9 @@ buildscript {
 allprojects {
     repositories {
         mavenCentral()
+    }
+
+    tasks.withType(JavaCompile) {
+        options.encoding = "UTF-8"
     }
 }

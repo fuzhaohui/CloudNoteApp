@@ -8,3 +8,13 @@ include ':external:datetimepicker'
 include ':external:drag-sort-listview'
 include ':external:ResideMenu'
 include ':external:photoprocessing'
+
+
+//override your build tools version in gradle.properties
+if (!System.properties['buildToolsVersion']) {
+    System.properties['buildToolsVersion'] =  "20.0.0"
+}
+
+if (!System.properties['androidGradlePluginVersion']) {
+    System.properties['androidGradlePluginVersion'] = "0.12.+"
+}

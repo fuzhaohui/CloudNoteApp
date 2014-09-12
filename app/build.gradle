@@ -2,12 +2,12 @@ apply plugin: 'com.android.application'
 
 android {
     signingConfigs {
-        /*app {
+        app {
             keyAlias 'sdkdemotest'
             keyPassword '123456'
-            storeFile file('D:/Git_Repositories/CloudNoteApp/app/sdkdemotest.keystore')
+            storeFile file('sdkdemotest.keystore')
             storePassword '123456'
-        }*/
+        }
     }
     compileSdkVersion Integer.parseInt(project.ANDROID_COMPILE_SDK_VERSION)
     buildToolsVersion project.ANDROID_BUILD_TOOLS_VERSION
@@ -22,7 +22,7 @@ android {
         release {
             runProguard false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
-            /*signingConfig signingConfigs.app*/
+            signingConfig signingConfigs.app
             ndk {
                 moduleName "jnimain"
                 abiFilters "armeabi", "armeabi-v7a"
@@ -58,4 +58,7 @@ dependencies {
     compile 'com.navercorp.pulltorefresh:extras:3.2.3'
     compile 'com.android.support:support-v4:20.0.0'
     compile 'com.android.support:appcompat-v7:20.0.0'
+    compile 'com.loopj.android:android-async-http:1.4.6'
+    compile 'com.google.code.gson:gson:2.3'
+    compile 'com.mcxiaoke.volley:library:1.0.6@aar'
 }

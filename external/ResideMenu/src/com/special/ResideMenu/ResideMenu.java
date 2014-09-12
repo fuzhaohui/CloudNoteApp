@@ -64,7 +64,8 @@ public class ResideMenu extends FrameLayout{
     private int pressedState   = PRESSED_DOWN;
     private List<Integer> disabledSwipeDirection = new ArrayList<Integer>();
     //valid scale factor is between 0.0f and 1.0f.
-    private float mScaleValue = 0.5f;
+    private float xScaleValue = 0.5f;
+    private float yScaleValue = 0.5f;
 
     public ResideMenu(Context context) {
         super(context);
@@ -107,6 +108,10 @@ public class ResideMenu extends FrameLayout{
         viewDecor.removeViewAt(0);
         viewActivity.setContent(mContent);
         addView(viewActivity);
+
+        ViewGroup parent = (ViewGroup) scrollViewLeftMenu.getParent();
+        parent.removeView(scrollViewLeftMenu);
+        parent.removeView(scrollViewRightMenu);
     }
 
     private void setShadowAdjustScaleXByOrientation(){
@@ -258,9 +263,9 @@ public class ResideMenu extends FrameLayout{
         setScaleDirection(direction);
 
         isOpened = true;
-        AnimatorSet scaleDown_activity = buildScaleDownAnimation(viewActivity, mScaleValue, mScaleValue);
+        AnimatorSet scaleDown_activity = buildScaleDownAnimation(viewActivity, xScaleValue, yScaleValue);
         AnimatorSet scaleDown_shadow = buildScaleDownAnimation(imageViewShadow,
-        		mScaleValue + shadowAdjustScaleX, mScaleValue + shadowAdjustScaleY);
+        		xScaleValue + shadowAdjustScaleX, yScaleValue + shadowAdjustScaleY);
         AnimatorSet alpha_menu = buildMenuAnimation(scrollViewMenu, 1.0f);
         scaleDown_shadow.addListener(animationListener);
         scaleDown_activity.playTogether(scaleDown_shadow);
@@ -337,7 +342,7 @@ public class ResideMenu extends FrameLayout{
         @Override
         public void onAnimationStart(Animator animation) {
             if (isOpened()){
-                scrollViewMenu.setVisibility(VISIBLE);
+                showScrollViewMenu();
                 if (menuListener != null)
                     menuListener.openMenu();
             }
@@ -352,7 +357,7 @@ public class ResideMenu extends FrameLayout{
             }else{
                 viewActivity.setTouchDisable(false);
                 viewActivity.setOnClickListener(null);
-                scrollViewMenu.setVisibility(GONE);
+                hideScrollViewMenu();
                 if (menuListener != null)
                     menuListener.closeMenu();
             }
@@ -520,7 +525,7 @@ public class ResideMenu extends FrameLayout{
                     }
                 } else if(pressedState == PRESSED_MOVE_HORIZANTAL) {
                     if (currentActivityScaleX < 0.95)
-                        scrollViewMenu.setVisibility(VISIBLE);
+                        showScrollViewMenu();
 
                     float targetScale = getTargetScale(ev.getRawX());
                     ViewHelper.setScaleX(viewActivity, targetScale);
@@ -572,7 +577,16 @@ public class ResideMenu extends FrameLayout{
     }
     
     public void setScaleValue(float scaleValue) {
-        this.mScaleValue = scaleValue;
+        this.xScaleValue = scaleValue;
+        this.yScaleValue = scaleValue;
+    }
+
+    public void setXScaleValue(float xScaleValue) {
+        this.xScaleValue = xScaleValue;
+    }
+
+    public void setYScaleValue(float yScaleValue) {
+        this.yScaleValue = yScaleValue;
     }
 
     public interface OnMenuListener{
@@ -588,4 +602,15 @@ public class ResideMenu extends FrameLayout{
         public void closeMenu();
     }
 
+    private void showScrollViewMenu(){
+        if (scrollViewMenu != null && scrollViewMenu.getParent() == null){
+            addView(scrollViewMenu);
+        }
+    }
+
+    private void hideScrollViewMenu(){
+        if (scrollViewMenu != null && scrollViewMenu.getParent() != null){
+            removeView(scrollViewMenu);
+        }
+    }
 }

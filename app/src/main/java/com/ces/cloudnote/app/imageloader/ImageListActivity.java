@@ -28,6 +28,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.ces.cloudnote.app.R;
+import com.ces.cloudnote.app.components.RoundImageView;
 import com.ces.cloudnote.app.imageloader.Constants.Extra;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.assist.ImageLoadingListener;
@@ -94,7 +95,7 @@ public class ImageListActivity extends AbsListViewBaseActivity {
 
 		private class ViewHolder {
 			public TextView text;
-			public ImageView image;
+			public RoundImageView image;
 		}
 
 		@Override
@@ -120,7 +121,7 @@ public class ImageListActivity extends AbsListViewBaseActivity {
 				view = getLayoutInflater().inflate(R.layout.item_list_image, parent, false);
 				holder = new ViewHolder();
 				holder.text = (TextView) view.findViewById(R.id.text);
-				holder.image = (ImageView) view.findViewById(R.id.image);
+				holder.image = (RoundImageView) view.findViewById(R.id.round_image);
 				view.setTag(holder);
 			} else {
 				holder = (ViewHolder) view.getTag();
