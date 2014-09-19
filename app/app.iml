@@ -93,7 +93,6 @@
     <orderEntry type="library" exported="" name="library-2.4.0" level="project" />
     <orderEntry type="library" exported="" name="gson-2.3" level="project" />
     <orderEntry type="library" exported="" name="universal-image-loader-1.9.3" level="project" />
-    <orderEntry type="module" module-name="ActionBar-PullToRefresh" exported="" />
     <orderEntry type="module" module-name="ResideMenu" exported="" />
     <orderEntry type="module" module-name="drag-sort-listview" exported="" />
   </component>
