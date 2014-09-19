@@ -13,21 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-buildscript {
-  repositories {
-    mavenCentral()
-  }
-  dependencies {
-    classpath 'com.android.tools.build:gradle:0.12.1'
-  }
-}
-
 apply plugin: 'com.android.library'
 
 dependencies {
   //compile fileTree(dir: 'libs', include: '*.jar')
-  compile 'com.android.support:support-v4:19.0.1+'
+  compile 'com.android.support:support-v4:20.0.+'
 }
 
 android {

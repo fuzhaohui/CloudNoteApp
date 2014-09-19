@@ -46,7 +46,6 @@ dependencies {
     compile files('../external/googlemediaframework/libs/exoplayer.jar')
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
-    compile project(':external:ActionBar-PullToRefresh')
     compile project(':external:drag-sort-listview')
     compile project(':external:ResideMenu')
 
