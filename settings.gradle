@@ -1,5 +1,4 @@
 include ':app'
-include ':external:imageloader'
 include ':external:googlemediaframework'
 include ':external:cards'
 include ':external:silk'

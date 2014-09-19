@@ -1,183 +1,220 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--<GridView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/main_gridView"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:gravity="center"
-    android:horizontalSpacing="4dip"
-    android:numColumns="3"
-    android:stretchMode="columnWidth"
-    android:verticalSpacing="4dip"
-    android:padding="4dip" />-->
+<com.ces.cloudnote.app.layout.DragLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg" >
 
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/gridview"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:numColumns="auto_fit"
-    android:verticalSpacing="10dp"
-    android:horizontalSpacing="10dp"
-    android:stretchMode="columnWidth"
-    android:gravity="top"
-    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="30dp"
+        android:paddingLeft="30dp"
+        android:paddingTop="50dp" >
 
-    <TableRow>
-       <!-- <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        <LinearLayout
+            android:id="@+id/ll1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
-            android:orientation="vertical" >-->
-            <EditText
-                android:id="@+id/edit_message"
-                android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/iv_bottom"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/ic_launcher" />
+
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="@string/edit_message"/>
-            <Button
-                android:id="@+id/send_message_btn"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:text="@string/button_send"
-            />
-            <Button
-                android:id="@+id/demoLayout"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:text="@string/button_send"
-                />
-        <!--</LinearLayout>-->
-    </TableRow>
-    <!--<TableRow>
-        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:text="BlueMor"
+                android:textColor="#ffffff"
+                android:textSize="25sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_mail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="wyfmor@163.com"
+            android:textColor="#ffffff"
+            android:textSize="15sp" />
+
+        <ListView
+            android:id="@+id/lv"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp" >
-            <EditText
-                android:id="@+id/edit_message1"
-                android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/tv_mail"
+            android:layout_below="@id/ll1"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="20dp"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"
+            android:textColor="#ffffff" />
+    </RelativeLayout>
+
+    <com.ces.cloudnote.app.layout.MyRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eeeeee" >
+
+        <RelativeLayout
+            android:id="@+id/rl_title"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="#009990" >
+
+            <ImageView
+                android:id="@+id/iv_icon"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_launcher" />
+
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="@string/edit_message"/>
-            <Spinner
-                android:id="@+id/dates"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/edit_message1"
-                android:layout_alignParentLeft="true"
-                android:layout_toLeftOf="@+id/times" />
-            <Spinner
-                android:id="@id/times"
-                android:layout_width="96dp"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/edit_message1"
-                android:layout_alignParentRight="true" />
-            <Button
-                android:layout_width="96dp"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/times"
-                android:layout_alignParentRight="true"
-                android:text="@string/edit_message" />
+                android:layout_centerInParent="true"
+                android:text="系统相册"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
         </RelativeLayout>
-    </TableRow>-->
-    <TableRow>
-    	 <Button
-            android:id="@+id/contact_btn"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:text="@string/contacts"/>
-	    <Button
-            android:id="@+id/uiHider_btn"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:text="@string/uihider"/>
-        <Button
-            android:id="@+id/voiceEmail_btn"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:text="@string/voicemail"/>
-        <Button
-            android:id="@+id/imageLoader_btn"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:text="@string/imageloader"/>
-    </TableRow>
-    <TableRow>
-        <Button
-            android:id="@+id/navigateMenu_btn"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:text="@string/navigate"/>
-        
-        <Button
-            android:id="@+id/photoIntent_btn"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:text="@string/photoIntent"/>
-        
-        <Button
-            android:id="@+id/drawerMenu_btn"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:text="@string/drawer"/>
-        
-        <Button
-            android:id="@+id/newsReader_btn"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:text="@string/newsreader"/>
-        
-    </TableRow>
-    <TableRow >
-        <Button
-            android:id="@+id/networkUsage_btn"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:text="@string/networkusage"/>
-        <Button
-            android:id="@+id/fragments_btn"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:text="@string/fragments"/>
-         
-        <Button
-            android:id="@+id/qiyi_btn"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:text="@string/qiyi"/>
-         
-        <Button
-            android:id="@+id/bitmapFun_btn"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:text="@string/bitmapfun"/>
-    </TableRow>
-    <TableRow>
-        <Button
-            android:id="@+id/photoProcessing_btn"
+
+        <GridView
+            android:id="@+id/gv_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_title"
+            android:cacheColorHint="#00000000"
+            android:numColumns="4"
+            android:verticalSpacing="20dp" >
+
+
+
+            <!--<TableRow>
+                <EditText
+                    android:id="@+id/edit_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/edit_message"/>
+                <Button
+                    android:id="@+id/send_message_btn"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:text="@string/button_send"
+                    />
+                <Button
+                    android:id="@+id/demoLayout"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/button_send"
+                    />
+            </TableRow>
+
+            <TableRow>
+                <Button
+                    android:id="@+id/contact_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/contacts"/>
+                <Button
+                    android:id="@+id/uiHider_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/uihider"/>
+                <Button
+                    android:id="@+id/voiceEmail_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/voicemail"/>
+            </TableRow>
+            <TableRow>
+                <Button
+                    android:id="@+id/navigateMenu_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/navigate"/>
+
+                <Button
+                    android:id="@+id/photoIntent_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/photoIntent"/>
+
+                <Button
+                    android:id="@+id/drawerMenu_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/drawer"/>
+
+                <Button
+                    android:id="@+id/newsReader_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/newsreader"/>
+
+            </TableRow>
+            <TableRow >
+                <Button
+                    android:id="@+id/networkUsage_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/networkusage"/>
+                <Button
+                    android:id="@+id/fragments_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fragments"/>
+
+                <Button
+                    android:id="@+id/qiyi_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/qiyi"/>
+
+                <Button
+                    android:id="@+id/bitmapFun_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bitmapfun"/>
+            </TableRow>
+            <TableRow>
+                <Button
+                    android:id="@+id/photoProcessing_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/phtotprocessing"/>
+                <Button
+                    android:id="@+id/baiduMap_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/baiduMap"/>
+                <Button
+                    android:id="@+id/webView_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/webView"/>
+                <Button
+                    android:id="@+id/resideMenu_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/resideMenu"/>
+            </TableRow>-->
+        </GridView>
+
+        <TextView
+            android:id="@+id/iv_noimg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/phtotprocessing"/>
-        <Button
-            android:id="@+id/baiduMap_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/baiduMap"/>
-        <Button
-            android:id="@+id/webView_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/webView"/>
-        <Button
-            android:id="@+id/resideMenu_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/resideMenu"/>
-
-    </TableRow>
-
-</TableLayout>
-
-
-
-
+            android:layout_centerInParent="true"
+            android:contentDescription="@string/app_name"
+            android:text="你的系统相册没有图片哦~"
+            android:visibility="gone" />
+    </com.ces.cloudnote.app.layout.MyRelativeLayout>
+</com.ces.cloudnote.app.layout.DragLayout>

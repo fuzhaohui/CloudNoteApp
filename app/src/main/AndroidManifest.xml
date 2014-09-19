@@ -35,7 +35,6 @@
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <application
-        android:name=".imageloader.UILApplication"
         android:allowBackup="true"
         android:description="@string/app_description"
         android:icon="@drawable/ic_launcher"
