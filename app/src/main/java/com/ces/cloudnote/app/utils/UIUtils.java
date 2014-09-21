@@ -375,11 +375,11 @@ public class UIUtils {
 //    }
 
 
-    public static void startActivity(Context ctx, Class<?> target) {
+    public  static <T> void startActivity(Context ctx, Class<T> target) {
         startActivity(ctx, target, null);
     }
 
-    public static void startActivity(Context ctx, Class<?> target, Bundle bundle) {
+    public  static <T> void startActivity(Context ctx, Class<T> target, Bundle bundle) {
         Intent intent = new Intent(ctx, target);
         if (bundle != null) {
             intent.putExtras(bundle);

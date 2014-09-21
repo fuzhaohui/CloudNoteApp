@@ -21,9 +21,12 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.SpinnerAdapter;
@@ -50,57 +53,48 @@ import com.ces.cloudnote.app.R;
  * If an Action Bar is not available, a regular image and button are shown in the top area of
  * the screen, emulating an Action Bar.
  */
-public class NewsReaderActivity extends FragmentActivity
+public class NewsReaderActivity extends Fragment
         implements HeadlinesFragment.OnHeadlineSelectedListener,
                    CompatActionBarNavListener,
                    OnClickListener  {
 
-    // Whether or not we are in dual-pane mode
+    private View parentView;
     boolean mIsDualPane = false;
-
-    // The fragment where the headlines are displayed
     HeadlinesFragment mHeadlinesFragment;
-
-    // The fragment where the article is displayed (null if absent)
     ArticleFragment mArticleFragment;
-
-    // The news category and article index currently being displayed
     int mCatIndex = 0;
     int mArtIndex = 0;
     NewsCategory mCurrentCat;
-
-    // List of category titles
     final String CATEGORIES[] = { "Top Stories", "Politics", "Economy", "Technology" };
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.main_layout);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        parentView = inflater.inflate(R.layout.main_layout, container, false);
+        setUpViews();
+        return parentView;
+    }
 
+    public void setUpViews() {
         // find our fragments
-        mHeadlinesFragment = (HeadlinesFragment) getSupportFragmentManager().findFragmentById(
+        mHeadlinesFragment = (HeadlinesFragment) getActivity().getSupportFragmentManager().findFragmentById(
                 R.id.headlines);
-        mArticleFragment = (ArticleFragment) getSupportFragmentManager().findFragmentById(
+        mArticleFragment = (ArticleFragment) getActivity().getSupportFragmentManager().findFragmentById(
                 R.id.article);
 
         // Determine whether we are in single-pane or dual-pane mode by testing the visibility
         // of the article view.
-        View articleView = findViewById(R.id.article);
+        View articleView = parentView.findViewById(R.id.article);
         mIsDualPane = articleView != null && articleView.getVisibility() == View.VISIBLE;
 
         // Register ourselves as the listener for the headlines fragment events.
         mHeadlinesFragment.setOnHeadlineSelectedListener(this);
 
-        // Set up the Action Bar (or not, if one is not available)
-        int catIndex = savedInstanceState == null ? 0 : savedInstanceState.getInt("catIndex", 0);
-        setUpActionBar(mIsDualPane, catIndex);
-
         // Set up headlines fragment
         mHeadlinesFragment.setSelectable(mIsDualPane);
-        restoreSelection(savedInstanceState);
+        //restoreSelection(savedInstanceState);
 
         // Set up the category button (shown if an Action Bar is not available)
-        Button catButton = (Button) findViewById(R.id.categorybutton);
+        Button catButton = (Button) parentView.findViewById(R.id.categorybutton);
         if (catButton != null) {
             catButton.setOnClickListener(this);
         }
@@ -116,48 +110,6 @@ public class NewsReaderActivity extends FragmentActivity
                 onHeadlineSelected(artIndex);
             }
         }
-    }
-
-    @Override
-    public void onRestoreInstanceState(Bundle savedInstanceState) {
-        restoreSelection(savedInstanceState);
-    }
-
-    /** Sets up Action Bar (if present).
-     *
-     * @param showTabs whether to show tabs (if false, will show list).
-     * @param selTab the selected tab or list item.
-     */
-    public void setUpActionBar(boolean showTabs, int selTab) {
-        if (Build.VERSION.SDK_INT < 11) {
-            // No action bar for you!
-            // But do not despair. In this case the layout includes a bar across the
-            // top that looks and feels like an action bar, but is made up of regular views.
-            return;
-        }
-
-        android.app.ActionBar actionBar = getActionBar();
-        actionBar.setDisplayShowTitleEnabled(false);
-
-        // Set up a CompatActionBarNavHandler to deliver us the Action Bar nagivation events
-        CompatActionBarNavHandler handler = new CompatActionBarNavHandler(this);
-        if (showTabs) {
-            actionBar.setNavigationMode(android.app.ActionBar.NAVIGATION_MODE_TABS);
-            int i;
-            for (i = 0; i < CATEGORIES.length; i++) {
-                actionBar.addTab(actionBar.newTab().setText(CATEGORIES[i]).setTabListener(handler));
-            }
-            actionBar.setSelectedNavigationItem(selTab);
-        }
-        else {
-            actionBar.setNavigationMode(android.app.ActionBar.NAVIGATION_MODE_LIST);
-            SpinnerAdapter adap = new ArrayAdapter<String>(this, R.layout.actionbar_list_item,
-                    CATEGORIES);
-            actionBar.setListNavigationCallbacks(adap, handler);
-        }
-
-        // Show logo instead of icon+title.
-        actionBar.setDisplayUseLogoEnabled(true);
     }
 
     @Override
@@ -182,7 +134,7 @@ public class NewsReaderActivity extends FragmentActivity
 
         // If we are displaying a "category" button (on the ActionBar-less UI), we have to update
         // its text to reflect the current category.
-        Button catButton = (Button) findViewById(R.id.categorybutton);
+        Button catButton = (Button) parentView.findViewById(R.id.categorybutton);
         if (catButton != null) {
             catButton.setText(CATEGORIES[mCatIndex]);
         }
@@ -206,7 +158,7 @@ public class NewsReaderActivity extends FragmentActivity
         }
         else {
             // use separate activity
-            Intent i = new Intent(this, ArticleActivity.class);
+            Intent i = new Intent(parentView.getContext(), ArticleActivity.class);
             i.putExtra("catIndex", mCatIndex);
             i.putExtra("artIndex", index);
             startActivity(i);
@@ -226,13 +178,6 @@ public class NewsReaderActivity extends FragmentActivity
         setNewsCategory(catIndex);
     }
 
-    /** Save instance state. Saves current category/article index. */
-    @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        outState.putInt("catIndex", mCatIndex);
-        outState.putInt("artIndex", mArtIndex);
-        super.onSaveInstanceState(outState);
-    }
 
     /** Called when news category button is clicked.
      *
@@ -241,7 +186,7 @@ public class NewsReaderActivity extends FragmentActivity
      */
     @Override
     public void onClick(View v) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        AlertDialog.Builder builder = new AlertDialog.Builder(parentView.getContext());
         builder.setTitle("Select a Category");
         builder.setItems(CATEGORIES, new DialogInterface.OnClickListener() {
             @Override

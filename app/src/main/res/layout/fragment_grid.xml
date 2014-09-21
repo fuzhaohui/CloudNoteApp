@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bluemor.reddotface.fragments.BaseFragment">
+
+    <GridView
+        android:id="@+id/gv_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="#00000000"
+        android:numColumns="4"
+        android:verticalSpacing="20dp"></GridView>
+
+    <TextView
+        android:id="@+id/iv_noimg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:contentDescription="@string/app_name"
+        android:text="你的系统相册没有图片哦~"
+        android:visibility="gone" />
+
+</FrameLayout>

@@ -11,9 +11,12 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.VideoView;
@@ -27,7 +30,7 @@ import java.util.Date;
 import java.util.List;
 
 
-public class PhotoIntentActivity extends ActionBarActivity {
+public class PhotoIntentActivity extends Fragment {
 
 	private static final int ACTION_TAKE_PHOTO_B = 1;
 	private static final int ACTION_TAKE_PHOTO_S = 2;
@@ -49,6 +52,8 @@ public class PhotoIntentActivity extends ActionBarActivity {
 	private static final String JPEG_FILE_SUFFIX = ".jpg";
 
 	private AlbumStorageDirFactory mAlbumStorageDirFactory = null;
+
+    private View parentView;
 
 	
 	/* Photo album for this application */
@@ -139,7 +144,7 @@ public class PhotoIntentActivity extends ActionBarActivity {
 			File f = new File(mCurrentPhotoPath);
 		    Uri contentUri = Uri.fromFile(f);
 		    mediaScanIntent.setData(contentUri);
-		    this.sendBroadcast(mediaScanIntent);
+		    parentView.getContext().sendBroadcast(mediaScanIntent);
 	}
 
 	private void dispatchTakePictureIntent(int actionCode) {
@@ -224,32 +229,34 @@ public class PhotoIntentActivity extends ActionBarActivity {
 		}
 	};
 
-	/** Called when the activity is first created. */
-	@Override
-	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_photointent);
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        parentView = inflater.inflate(R.layout.activity_photointent, container, false);
+        setUpViews();
+        return parentView;
+    }
 
-		mImageView = (ImageView) findViewById(R.id.imageView1);
-		mVideoView = (VideoView) findViewById(R.id.videoView1);
+	public void setUpViews() {
+		mImageView = (ImageView) getActivity().findViewById(R.id.imageView1);
+		mVideoView = (VideoView) parentView.findViewById(R.id.videoView1);
 		mImageBitmap = null;
 		mVideoUri = null;
 
-		Button picBtn = (Button) findViewById(R.id.btnIntend);
+		Button picBtn = (Button) parentView.findViewById(R.id.btnIntend);
 		setBtnListenerOrDisable( 
 				picBtn, 
 				mTakePicOnClickListener,
 				MediaStore.ACTION_IMAGE_CAPTURE
 		);
 
-		Button picSBtn = (Button) findViewById(R.id.btnIntendS);
+		Button picSBtn = (Button) parentView.findViewById(R.id.btnIntendS);
 		setBtnListenerOrDisable( 
 				picSBtn, 
 				mTakePicSOnClickListener,
 				MediaStore.ACTION_IMAGE_CAPTURE
 		);
 
-		Button vidBtn = (Button) findViewById(R.id.btnIntendV);
+		Button vidBtn = (Button) parentView.findViewById(R.id.btnIntendV);
 		setBtnListenerOrDisable( 
 				vidBtn, 
 				mTakeVidOnClickListener,
@@ -263,60 +270,61 @@ public class PhotoIntentActivity extends ActionBarActivity {
 		}
 	}
 
-	@Override
-	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		switch (requestCode) {
-		case ACTION_TAKE_PHOTO_B: {
-			if (resultCode == RESULT_OK) {
-				handleBigCameraPhoto();
-			}
-			break;
-		} // ACTION_TAKE_PHOTO_B
 
-		case ACTION_TAKE_PHOTO_S: {
-			if (resultCode == RESULT_OK) {
-				handleSmallCameraPhoto(data);
-			}
-			break;
-		} // ACTION_TAKE_PHOTO_S
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        switch (requestCode) {
+            case ACTION_TAKE_PHOTO_B: {
+                if (resultCode == getActivity().RESULT_OK) {
+                    handleBigCameraPhoto();
+                }
+                break;
+            } // ACTION_TAKE_PHOTO_B
 
-		case ACTION_TAKE_VIDEO: {
-			if (resultCode == RESULT_OK) {
-				handleCameraVideo(data);
-			}
-			break;
-		} // ACTION_TAKE_VIDEO
+            case ACTION_TAKE_PHOTO_S: {
+                if (resultCode == getActivity().RESULT_OK) {
+                    handleSmallCameraPhoto(data);
+                }
+                break;
+            } // ACTION_TAKE_PHOTO_S
+
+            case ACTION_TAKE_VIDEO: {
+                if (resultCode == getActivity().RESULT_OK) {
+                    handleCameraVideo(data);
+                }
+                break;
+            } // ACTION_TAKE_VIDEO
 		} // switch
-	}
+    }
 
-	// Some lifecycle callbacks so that the image can survive orientation change
-	@Override
-	protected void onSaveInstanceState(Bundle outState) {
-		outState.putParcelable(BITMAP_STORAGE_KEY, mImageBitmap);
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        outState.putParcelable(BITMAP_STORAGE_KEY, mImageBitmap);
 		outState.putParcelable(VIDEO_STORAGE_KEY, mVideoUri);
 		outState.putBoolean(IMAGEVIEW_VISIBILITY_STORAGE_KEY, (mImageBitmap != null) );
 		outState.putBoolean(VIDEOVIEW_VISIBILITY_STORAGE_KEY, (mVideoUri != null) );
-		super.onSaveInstanceState(outState);
-	}
+        super.onSaveInstanceState(outState);
+    }
 
-	@Override
-	protected void onRestoreInstanceState(Bundle savedInstanceState) {
-		super.onRestoreInstanceState(savedInstanceState);
+    @Override
+    public void onViewStateRestored(Bundle savedInstanceState) {
+
 		mImageBitmap = savedInstanceState.getParcelable(BITMAP_STORAGE_KEY);
 		mVideoUri = savedInstanceState.getParcelable(VIDEO_STORAGE_KEY);
 		mImageView.setImageBitmap(mImageBitmap);
 		mImageView.setVisibility(
-				savedInstanceState.getBoolean(IMAGEVIEW_VISIBILITY_STORAGE_KEY) ? 
+				savedInstanceState.getBoolean(IMAGEVIEW_VISIBILITY_STORAGE_KEY) ?
 						ImageView.VISIBLE : ImageView.INVISIBLE
 		);
 		mVideoView.setVideoURI(mVideoUri);
 		mVideoView.setVisibility(
-				savedInstanceState.getBoolean(VIDEOVIEW_VISIBILITY_STORAGE_KEY) ? 
+				savedInstanceState.getBoolean(VIDEOVIEW_VISIBILITY_STORAGE_KEY) ?
 						ImageView.VISIBLE : ImageView.INVISIBLE
 		);
-	}
+        super.onViewStateRestored(savedInstanceState);
+    }
 
-	/**
+    /**
 	 * Indicates whether the specified action can be used as an intent. This
 	 * method queries the package manager for installed packages that can
 	 * respond to an intent with the specified action. If no suitable package is
@@ -343,7 +351,7 @@ public class PhotoIntentActivity extends ActionBarActivity {
 			Button.OnClickListener onClickListener,
 			String intentName
 	) {
-		if (isIntentAvailable(this, intentName)) {
+		if (isIntentAvailable(parentView.getContext(), intentName)) {
 			btn.setOnClickListener(onClickListener);        	
 		} else {
 			btn.setText( 

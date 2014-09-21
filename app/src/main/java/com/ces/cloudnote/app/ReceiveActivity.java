@@ -14,11 +14,11 @@ public class ReceiveActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.receive);
-		
+
 		Intent intent = getIntent();
 		String action = intent.getAction();
 		String type = intent.getType();
-		
+
 		if(Intent.ACTION_SEND.equals(action)) {
 			if("text/plain".equals(type)) {
 				handleSendText(intent);
@@ -30,7 +30,7 @@ public class ReceiveActivity extends Activity {
 				handleSendMultipleImages(intent);
 			}
 		} else {
-			
+
 		}
 	}
 
@@ -40,7 +40,7 @@ public class ReceiveActivity extends Activity {
 		getMenuInflater().inflate(R.menu.receive, menu);
 		return true;
 	}
-	
+
 	private void handleSendText(Intent intent) {
 	    String sharedText = intent.getStringExtra(Intent.EXTRA_TEXT);
 	    if (sharedText != null) {

@@ -1,12 +1,4 @@
 include ':app'
-include ':external:googlemediaframework'
-include ':external:cards'
-include ':external:silk'
-include ':external:datetimepicker'
-include ':external:drag-sort-listview'
-include ':external:ResideMenu'
-include ':external:photoprocessing'
-
 
 //override your build tools version in gradle.properties
 if (!System.properties['buildToolsVersion']) {

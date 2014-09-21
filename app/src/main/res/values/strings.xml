@@ -130,7 +130,6 @@
     <string name="webView">嵌入网页</string>
     <string name="resideMenu">Reside菜单</string>
     <string name="baiduMap">百度地图</string>
-    <string name="sdk_name">Baidu Navigation SDK Demo</string>
 
     <string-array name="sdkapi_items">
         <item>关键字搜索</item>

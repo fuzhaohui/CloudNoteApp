@@ -21,7 +21,7 @@ import android.support.v4.app.FragmentTransaction;
 
 import com.ces.cloudnote.app.R;
 
-public class FragmentMainActivity extends FragmentActivity 
+public class FragmentMainActivity extends FragmentActivity
         implements HeadlinesFragment.OnHeadlineSelectedListener {
 
     /** Called when the activity is first created. */
