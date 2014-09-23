@@ -47,7 +47,7 @@ public class MainActivity extends FragmentActivity implements BaseFragment.OnFra
                 "系统相册",
                 getText(R.string.activity_contacts_list).toString(),
                 getText(R.string.qiyi).toString(),
-                getText(R.string.)};
+                getText(R.string.uihider).toString()};
 
         initDragLayout();
         initView();
