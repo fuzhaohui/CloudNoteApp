@@ -8,9 +8,20 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".ReceiveActivity" >
 
-    <TextView
+    <!--<TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/show_message" />
+        android:text="@string/show_message" />-->
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="显示地理位置信息"/>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </RelativeLayout>
