@@ -48,7 +48,8 @@ public class MainActivity extends FragmentActivity implements BaseFragment.OnFra
                 getText(R.string.activity_contacts_list).toString(),
                 getText(R.string.qiyi).toString(),
                 getText(R.string.uihider).toString(),
-                "音乐插入服务"};
+                "音乐插入服务",
+                "定位"};
 
         initDragLayout();
         initView();
@@ -127,8 +128,14 @@ public class MainActivity extends FragmentActivity implements BaseFragment.OnFra
                     case 3 :
                         startActivity(QiyiMainActivity.class);
                         break;
+                    case 4 :
+                        startActivity(ReceiveActivity.class);
+                        break;
                     case 5 :
                         startActivity(MusicServiceActivity.class);
+                        break;
+                    case 6 :
+                        startActivity(LocationActivity.class);
                         break;
                 }
 

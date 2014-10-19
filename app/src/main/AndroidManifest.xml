@@ -124,9 +124,13 @@
             android:exported="true" >
         </service>
 
-        <activity android:name=".MusicServiceActivity"
-            android:label="音乐播放服务"
-            />
+        <activity
+            android:name=".MusicServiceActivity"
+            android:label="音乐播放服务" />
+        <activity
+            android:name=".LocationActivity"
+            android:label="@string/title_activity_location" >
+        </activity>
     </application>
 
 </manifest>

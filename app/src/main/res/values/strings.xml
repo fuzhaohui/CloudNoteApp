@@ -234,15 +234,12 @@
     <!-- Save action -->
     <string name="saved_photo_toast_message">Saved photo to %s</string>
     <string name="title_activity_show_case">ShowCaseActivity</string>
-
-
     <string name="activity_scrollview">ScrollView</string>
     <string name="activity_listview">ListView</string>
     <string name="activity_gridview">GridView</string>
     <string name="activity_webview">WebView</string>
     <string name="activity_fragment_tabs">Fragments + Tabs</string>
     <string name="activity_fragment_tabs_vp">Fragments + Tabs + ViewPager</string>
-
     <string name="filler_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
         sollicitudin mauris varius lacus porttitor eget blandit massa facilisis. Nulla pellentesque
         odio sed purus fermentum vitae viverra orci faucibus. Sed ullamcorper condimentum vulputate.
@@ -275,9 +272,7 @@
         sapien adipiscing gravida. Proin turpis lectus, hendrerit vitae vehicula ut, auctor ac
         lectus. Pellentesque sollicitudin blandit ligula quis commodo. Mauris vulputate lectus in
         velit luctus aliquam. Quisque eget tincidunt elit. Quisque et augue quam, sed scelerisque
-        eros.
-    </string>
-
-
+        eros.</string>
+    <string name="title_activity_location">LocationActivity</string>
 
 </resources>
