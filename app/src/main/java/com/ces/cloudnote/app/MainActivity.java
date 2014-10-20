@@ -1,6 +1,5 @@
 package com.ces.cloudnote.app;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
@@ -19,8 +18,6 @@ import android.widget.TextView;
 
 import com.ces.cloudnote.app.components.RoundImageView;
 import com.ces.cloudnote.app.contactslist.ContactsListActivity;
-import com.ces.cloudnote.app.contactslist.ContactsListFragment;
-import com.ces.cloudnote.app.fragments.BaseFragment;
 import com.ces.cloudnote.app.fragments.GridFragment;
 import com.ces.cloudnote.app.fragments.ListFragment;
 import com.ces.cloudnote.app.layout.DragLayout;
@@ -28,13 +25,13 @@ import com.ces.cloudnote.app.qiyi.QiyiMainActivity;
 import com.ces.cloudnote.app.utils.Util;
 import com.nineoldandroids.view.ViewHelper;
 
-public class MainActivity extends FragmentActivity implements BaseFragment.OnFragmentInteractionListener {
+public class MainActivity extends FragmentActivity {
 
     private DragLayout dl;
     private ListView lv;
     private RoundImageView iv_main_avatar, iv_menu_avatar;
     private TextView tv_title, tv_realname;
-    private BaseFragment baseFragment;
+    private Fragment baseFragment;
     private String[] menuItems;
 
 
@@ -49,7 +46,9 @@ public class MainActivity extends FragmentActivity implements BaseFragment.OnFra
                 getText(R.string.qiyi).toString(),
                 getText(R.string.uihider).toString(),
                 "音乐插入服务",
-                "定位"};
+                "定位",
+                "联系人",
+                "常用组件Demo"};
 
         initDragLayout();
         initView();
@@ -137,6 +136,13 @@ public class MainActivity extends FragmentActivity implements BaseFragment.OnFra
                     case 6 :
                         startActivity(LocationActivity.class);
                         break;
+                    case 7 :
+                        startActivity(ContactsActivity.class);
+                        break;
+                    case 8 :
+                        startActivity(DemoActivity.class);
+                        break;
+
                 }
 
                 dl.close();
@@ -161,11 +167,6 @@ public class MainActivity extends FragmentActivity implements BaseFragment.OnFra
         //iv_icon.startAnimation(AnimationUtils.loadAnimation(this, R.anim.shake));
     }
 
-    @Override
-    public void onFragmentInteraction(String id) {
-
-    }
-
     private void changeFragment(Fragment targetFragment, int position) {
         tv_title.setText(menuItems[position]);
         getSupportFragmentManager()
@@ -187,4 +188,5 @@ public class MainActivity extends FragmentActivity implements BaseFragment.OnFra
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
+
 }

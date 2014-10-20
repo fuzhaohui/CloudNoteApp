@@ -131,6 +131,14 @@
             android:name=".LocationActivity"
             android:label="@string/title_activity_location" >
         </activity>
+        <activity
+            android:name=".ContactsActivity"
+            android:label="联系人" >
+        </activity>
+
+        <activity
+            android:name=".DemoActivity"
+            android:label="常用组件Demo" />
     </application>
 
 </manifest>

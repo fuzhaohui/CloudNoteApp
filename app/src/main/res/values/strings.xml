@@ -275,4 +275,28 @@
         eros.</string>
     <string name="title_activity_location">LocationActivity</string>
 
+
+    <string-array name="countries_array">
+        <item>Afghanistan</item>
+        <item>Albania</item>
+        <item>Algeria</item>
+        <item>American Samoa</item>
+        <item>Andorra</item>
+        <item>Angola</item>
+        <item>Anguilla</item>
+        <item>Antarctica</item>
+        <item>China</item>
+    </string-array>
+
+    <string-array name="planets_array1">
+        <item>水星</item>
+        <item>金星</item>
+        <item>地球</item>
+        <item>火星</item>
+        <item>木星</item>
+        <item>土星</item>
+        <item>天王星</item>
+        <item>海王星</item>
+    </string-array>
+
 </resources>

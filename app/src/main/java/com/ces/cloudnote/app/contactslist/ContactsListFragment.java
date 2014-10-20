@@ -90,6 +90,11 @@ public class ContactsListFragment extends ListFragment implements
     // Defines a tag for identifying log entries
     private static final String TAG = "ContactsListFragment";
 
+    @Override
+    public void onListItemClick(ListView l, View v, int position, long id) {
+        super.onListItemClick(l, v, position, id);
+    }
+
     // Bundle key for saving previously selected search result item
     private static final String STATE_PREVIOUSLY_SELECTED_KEY =
             "com.ces.cloudnote.app.contactslist.ui.SELECTED_ITEM";

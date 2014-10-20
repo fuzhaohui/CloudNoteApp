@@ -2,6 +2,7 @@ package com.ces.cloudnote.app.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +18,7 @@ import com.ces.cloudnote.app.utils.Util;
 /**
  * Created by fuzhaohui on 14-9-20.
  */
-public class GridFragment extends BaseFragment {
+public class GridFragment extends Fragment {
 
     private GridView gv_img;
     private ImageAdapter adapter;
