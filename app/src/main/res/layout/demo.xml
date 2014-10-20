@@ -158,11 +158,17 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <!--       <ToggleButton
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:textOn="On"
-                       android:textOff="Off"/>-->
+            <ToggleButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textOn="On"
+                android:textOff="Off"/>
+
+            <!--<Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textOn="On"
+                android:textOff="Off"/>-->
 
             <Spinner
                 android:id="@+id/planets_spinner"
