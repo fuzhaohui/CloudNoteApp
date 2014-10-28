@@ -21,6 +21,7 @@ import com.ces.cloudnote.app.contactslist.ContactsListActivity;
 import com.ces.cloudnote.app.fragments.GridFragment;
 import com.ces.cloudnote.app.fragments.ListFragment;
 import com.ces.cloudnote.app.layout.DragLayout;
+import com.ces.cloudnote.app.photobyintent.PhotoIntentActivity;
 import com.ces.cloudnote.app.qiyi.QiyiMainActivity;
 import com.ces.cloudnote.app.utils.Util;
 import com.nineoldandroids.view.ViewHelper;
@@ -48,7 +49,9 @@ public class MainActivity extends FragmentActivity {
                 "音乐插入服务",
                 "定位",
                 "联系人",
-                "常用组件Demo"};
+                "常用组件Demo",
+                "摄像",
+                "拍照"};
 
         initDragLayout();
         initView();
@@ -142,6 +145,11 @@ public class MainActivity extends FragmentActivity {
                     case 8 :
                         startActivity(DemoActivity.class);
                         break;
+                    case 9 :
+                        startActivity(CameraActivity.class);
+                        break;
+                    case 10 :
+                        startActivity(PhotoIntentActivity.class);
 
                 }
 
