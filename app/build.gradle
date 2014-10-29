@@ -39,6 +39,17 @@ android {
         }
     }
     productFlavors {
+        app1 {
+            applicationId "com.ces.cloudnote.app.app1"
+            packageName "com.ces.cloudnote.app"
+            versionCode 20
+        }
+
+        app2 {
+            applicationId "com.ces.cloudnote.app.app2"
+            packageName "com.ces.cloudnote.app"
+            versionCode 20
+        }
     }
 }
 
@@ -65,7 +76,8 @@ dependencies {
 
     compile 'com.navercorp.pulltorefresh:parent:3.2.3'
     compile 'com.navercorp.pulltorefresh:extras:3.2.3'
-
-
     */
+
+    compile 'net.sf.proguard:proguard-gradle:5.0'
+    compile 'com.squareup.okhttp:okhttp:2.0.0'
 }
