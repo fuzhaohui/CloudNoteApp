@@ -139,8 +139,6 @@ public class WelcomeActivity extends Activity implements OnViewChangeListener {
 						WelcomeActivity.this.startActivity(intent);
 						WelcomeActivity.this.finish();
 						overridePendingTransition(R.anim.zoom_out_enter, R.anim.zoom_out_exit);
-
-
 					}
 				});
 				break;

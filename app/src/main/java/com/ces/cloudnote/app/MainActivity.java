@@ -1,6 +1,8 @@
 package com.ces.cloudnote.app;
 
+import android.content.BroadcastReceiver;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
@@ -11,6 +13,7 @@ import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -51,10 +54,20 @@ public class MainActivity extends FragmentActivity {
                 "联系人",
                 "常用组件Demo",
                 "摄像",
-                "拍照"};
+                "拍照",
+                "动画",
+                "异步任务"};
 
         initDragLayout();
         initView();
+        // 保持唤醒状态
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
+        BroadcastReceiver mReceiver=new MyBroadcastReceiver();
+        registerReceiver(
+                mReceiver,
+                new IntentFilter("MyBroadcast"));
+
     }
 
     private void initDragLayout() {
@@ -150,6 +163,13 @@ public class MainActivity extends FragmentActivity {
                         break;
                     case 10 :
                         startActivity(PhotoIntentActivity.class);
+                        break;
+                    case 11 :
+                        startActivity(AnimatorActivity.class);
+                        break;
+                    case 12 :
+                        startActivity(AsyncTaskActivity.class);
+                        break;
 
                 }
 
