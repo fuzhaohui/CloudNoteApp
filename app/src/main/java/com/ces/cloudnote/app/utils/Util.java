@@ -29,22 +29,22 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class Util {
-	
-	public static void initImageLoader(Context context) {
-		DisplayImageOptions defaultOptions = new DisplayImageOptions.Builder()
-				.showImageOnLoading(R.drawable.default_face)
-				.showImageForEmptyUri(R.drawable.default_face)
-				.showImageOnFail(R.drawable.default_face).cacheInMemory(true)
-				.considerExifParams(true)
-				.displayer(new FadeInBitmapDisplayer(300, true, true, true))
-				.imageScaleType(ImageScaleType.EXACTLY_STRETCHED)
-				.bitmapConfig(Bitmap.Config.RGB_565).build();
-		ImageLoaderConfiguration.Builder builder = new ImageLoaderConfiguration.Builder(
-				context).defaultDisplayImageOptions(defaultOptions).memoryCache(
-				new WeakMemoryCache());
-		ImageLoaderConfiguration config = builder.build();
-		ImageLoader.getInstance().init(config);
-	}
+
+    public static void initImageLoader(Context context) {
+        DisplayImageOptions defaultOptions = new DisplayImageOptions.Builder()
+                .showImageOnLoading(R.drawable.default_face)
+                .showImageForEmptyUri(R.drawable.default_face)
+                .showImageOnFail(R.drawable.default_face).cacheInMemory(true)
+                .considerExifParams(true)
+                .displayer(new FadeInBitmapDisplayer(300, true, true, true))
+                .imageScaleType(ImageScaleType.EXACTLY_STRETCHED)
+                .bitmapConfig(Bitmap.Config.RGB_565).build();
+        ImageLoaderConfiguration.Builder builder = new ImageLoaderConfiguration.Builder(
+                context).defaultDisplayImageOptions(defaultOptions).memoryCache(
+                new WeakMemoryCache());
+        ImageLoaderConfiguration config = builder.build();
+        ImageLoader.getInstance().init(config);
+    }
 
     @SuppressWarnings("deprecation")
     public static ArrayList<String> getGalleryPhotos(Activity act) {
@@ -59,9 +59,8 @@ public class Util {
                     columns, null, null, orderBy);
             if (imagecursor != null && imagecursor.getCount() > 0) {
                 while (imagecursor.moveToNext()) {
-                    String item = new String();
                     int dataColumnIndex = imagecursor.getColumnIndex(MediaStore.Images.Media.DATA);
-                    item = imagecursor.getString(dataColumnIndex);
+                    String item = imagecursor.getString(dataColumnIndex);
                     galleryList.add(item);
                 }
             }
@@ -94,7 +93,7 @@ public class Util {
     }
 
     public static boolean saveImageToGallery(Context context, Bitmap bmp,
-            boolean isPng) {
+                                             boolean isPng) {
         File appDir = new File(Environment.getExternalStorageDirectory(),
                 context.getString(R.string.app_name));
         if (!appDir.exists()) {
@@ -139,7 +138,7 @@ public class Util {
     }
 
     public static Object evaluate(float fraction, Object startValue,
-            Object endValue) {
+                                  Object endValue) {
         int startInt = (Integer) startValue;
         int startA = (startInt >> 24) & 0xff;
         int startR = (startInt >> 16) & 0xff;
