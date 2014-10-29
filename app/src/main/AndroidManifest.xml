@@ -51,7 +51,6 @@
             android:theme="@android:style/Theme.Light.NoTitleBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -63,23 +62,17 @@
             android:theme="@android:style/Theme.Light.NoTitleBar" >
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
-
                 <category android:name="android.intent.category.DEFAULT" />
-
                 <data android:mimeType="image/*" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
-
                 <category android:name="android.intent.category.DEFAULT" />
-
                 <data android:mimeType="text/plain" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.SEND_MULTIPLE" />
-
                 <category android:name="android.intent.category.DEFAULT" />
-
                 <data android:mimeType="image/*" />
             </intent-filter>
         </activity>
@@ -89,56 +82,62 @@
             android:name=".contactslist.ContactsListActivity"
             android:label="@string/activity_contacts_list"
             android:theme="@style/AppTheme" />
+
         <activity
             android:name=".contactslist.ContactDetailActivity"
             android:label="@string/activity_contact_detail"
             android:theme="@style/AppTheme" />
+
         <activity
             android:name=".qiyi.QiyiMainActivity"
             android:label="@string/qiyi"
             android:theme="@style/AppTheme" />
+
         <activity
             android:name=".qiyi.home.HomeActivity"
             android:label="@string/qiyi"
             android:theme="@style/AppTheme" />
+
         <activity
             android:name=".qiyi.more.MoreActivity"
             android:label="@string/qiyi"
             android:theme="@style/AppTheme" />
+
         <activity
             android:name=".qiyi.search.SearchActivity"
             android:label="@string/qiyi"
             android:theme="@style/AppTheme" />
+
         <activity
             android:name=".qiyi.account.AccountActivity"
             android:label="@string/qiyi"
             android:theme="@style/AppTheme" />
+
         <activity
             android:name=".qiyi.channel.ChannelActivity"
             android:label="@string/qiyi"
             android:theme="@style/AppTheme" />
+
         <activity
             android:name=".ReceiveActivity"
-            android:label="@string/title_activity_receive" >
-        </activity>
+            android:label="@string/title_activity_receive" />
 
         <service
             android:name=".services.MusicService"
             android:enabled="true"
-            android:exported="true" >
-        </service>
+            android:exported="true" />
 
         <activity
             android:name=".MusicServiceActivity"
             android:label="音乐播放服务" />
+
         <activity
             android:name=".LocationActivity"
-            android:label="@string/title_activity_location" >
-        </activity>
+            android:label="@string/title_activity_location" />
+
         <activity
             android:name=".ContactsActivity"
-            android:label="联系人" >
-        </activity>
+            android:label="联系人" />
 
         <activity
             android:name=".DemoActivity"
@@ -149,8 +148,8 @@
         android:configChanges="orientation|keyboardHidden|keyboard"/>
 
         <activity android:name=".photobyintent.PhotoIntentActivity"
-            android:screenOrientation="landscape"
-            android:configChanges="orientation|keyboardHidden|keyboard"/>
+            android:configChanges="orientation|keyboardHidden|keyboard"
+            android:label="拍照"/>
 
     </application>
 
