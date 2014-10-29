@@ -1,8 +1,10 @@
 package com.ces.cloudnote.app;
 
 import android.app.Activity;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
@@ -28,7 +30,6 @@ public class DemoActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.demo);
 
-
         // 获得AutoCompleteTextView组件
         AutoCompleteTextView textView = (AutoCompleteTextView) findViewById(R.id.autocomplete_country);
         // 从strings.xml获得国家名称的数组
@@ -44,6 +45,12 @@ public class DemoActivity extends Activity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // 为spinner设置适配器
         spinner.setAdapter(adapter1);
+
+
+        Intent intent = new Intent();
+        intent.setAction("MyBroadcast");
+        intent.putExtra("value", 1000);
+        sendBroadcast(intent);
 
 	}
 

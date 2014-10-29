@@ -83,7 +83,6 @@ public class CameraActivity extends Activity {
 
         //设置Activity的根内容视图
         setContentView(fl);
-
     }
 
     //相机按键按下的事件处理方法

@@ -151,6 +151,19 @@
             android:configChanges="orientation|keyboardHidden|keyboard"
             android:label="拍照"/>
 
+        <activity android:name=".AnimatorActivity"
+            android:label="动画"/>
+
+        <receiver android:name="MyBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="MyBroadcast" >
+                </action>
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".AsyncTaskActivity"
+            android:label="异步任务"/>
+
     </application>
 
 </manifest>
