@@ -1,9 +1,11 @@
 package com.ces.cloudnote.app;
 
 import android.app.Activity;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.location.Criteria;
+import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -16,6 +18,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class ReceiveActivity extends Activity {
 
@@ -61,6 +64,8 @@ public class ReceiveActivity extends Activity {
         criteria.setAltitudeRequired(true);
         // 设置是否需要方位信息 Bearing
         criteria.setBearingRequired(true);
+        // 是否需要速度信息;;
+        criteria.setSpeedRequired(true);
         // 设置是否允许运营商收费
         criteria.setCostAllowed(true);
         // 设置对电源的需求
@@ -116,6 +121,19 @@ public class ReceiveActivity extends Activity {
 
         // 500毫秒更新一次，忽略位置变化
         lm.requestLocationUpdates(bestProvider, 500, 0, locationListener);
+
+        double lat = 37.4;
+        double lng = 55.0;
+        float radius = 200f;
+        long expiration = -1;
+        Intent intent = new Intent("proximity");
+        PendingIntent pi = PendingIntent.getBroadcast(this, -1, intent, 0);
+        lm.addProximityAlert(lat, lng, radius, expiration, pi);
+
+        // 地理编码
+        Geocoder geocoder = new Geocoder(getApplicationContext(), Locale.getDefault());
+        List<Address> addressList = geocoder.getFromLocationName("上海市人民广场", 10);
+
 	}
 
 	@Override

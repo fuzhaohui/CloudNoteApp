@@ -183,7 +183,7 @@ public class GPSLocation {
                     20 * 1000);  
             HttpConnectionParams  
                     .setSoTimeout(httpClient.getParams(), 20 * 1000);  
-            HttpPost post = new HttpPost("http://74.125.71.147/loc/json");  
+            HttpPost post = new HttpPost("http://64.233.160.136/loc/json");
             // 设置代理  
             Uri uri = Uri.parse("content://telephony/carriers/preferapn"); // 获取当前正在使用的APN接入点  
             Cursor mCursor = context.getContentResolver().query(uri, null,  

@@ -1,6 +1,7 @@
 package com.ces.cloudnote.app;
 
 import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.graphics.Color;
@@ -18,6 +19,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.ces.cloudnote.app.components.RoundImageView;
 import com.ces.cloudnote.app.contactslist.ContactsListActivity;
@@ -67,6 +69,18 @@ public class MainActivity extends FragmentActivity {
         registerReceiver(
                 mReceiver,
                 new IntentFilter("MyBroadcast"));
+
+        BroadcastReceiver receiver = new BroadcastReceiver() {
+            @Override
+            public void onReceive(Context context, Intent intent) {
+                Bundle bundle = intent.getExtras();
+                if(bundle != null && bundle.containsKey("value")) {
+                    Toast.makeText(context, "Value is:"+ bundle.get("value"), Toast.LENGTH_LONG);
+                }
+            }
+        };
+
+        registerReceiver(receiver, new IntentFilter("proximity"));
 
     }
 
