@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.location.Address;
 import android.location.Criteria;
 import android.location.Geocoder;
 import android.location.Location;
@@ -18,6 +19,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 
 public class ReceiveActivity extends Activity {
@@ -131,8 +133,8 @@ public class ReceiveActivity extends Activity {
         lm.addProximityAlert(lat, lng, radius, expiration, pi);
 
         // 地理编码
-        Geocoder geocoder = new Geocoder(getApplicationContext(), Locale.getDefault());
-        List<Address> addressList = geocoder.getFromLocationName("上海市人民广场", 10);
+        //Geocoder geocoder = new Geocoder(getApplicationContext(), Locale.getDefault());
+        //List<Address> addressList = geocoder.getFromLocationName("上海市人民广场", 10);
 
 	}
 

@@ -20,7 +20,7 @@ public class AnimatorActivity extends Activity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.welcome);
+        setContentView(R.layout.animator);
 
         new CountDownTimer(2000,1000) {
 

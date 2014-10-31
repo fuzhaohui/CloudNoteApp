@@ -58,7 +58,9 @@ public class MainActivity extends FragmentActivity {
                 "摄像",
                 "拍照",
                 "动画",
-                "异步任务"};
+                "异步任务",
+                "动画2",
+                "百度地图"};
 
         initDragLayout();
         initView();
@@ -184,7 +186,12 @@ public class MainActivity extends FragmentActivity {
                     case 12 :
                         startActivity(AsyncTaskActivity.class);
                         break;
-
+                    case 13 :
+                        startActivity(Animator2Activity.class);
+                        break;
+                    case 14 :
+                        startActivity(BaiduMapActivity.class);
+                        break;
                 }
 
                 dl.close();
