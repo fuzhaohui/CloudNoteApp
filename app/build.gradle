@@ -20,7 +20,12 @@ android {
     }
     buildTypes {
         release {
-            runProguard false
+            debuggable false
+            jniDebuggable false
+            renderscriptDebuggable true
+            minifyEnabled true
+            pseudoLocalesEnabled true
+            zipAlignEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
             signingConfig signingConfigs.app
             ndk {
@@ -29,7 +34,6 @@ android {
             }
         }
         debug {
-            runProguard false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
             /*signingConfig signingConfigs.app*/
             ndk {
@@ -41,13 +45,11 @@ android {
     productFlavors {
         app1 {
             applicationId "com.ces.cloudnote.app.app1"
-            packageName "com.ces.cloudnote.app"
             versionCode 20
         }
 
         app2 {
             applicationId "com.ces.cloudnote.app.app2"
-            packageName "com.ces.cloudnote.app"
             versionCode 20
         }
     }
@@ -62,12 +64,12 @@ dependencies {
 
     compile 'com.loopj.android:android-async-http:1.4.6'
     compile 'com.google.code.gson:gson:2.3'
-
-
-
-    compile 'com.mcxiaoke.volley:library:1.0.6@aar'
-    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.navercorp.pulltorefresh:library:3.2.0@aar'
+    compile 'com.github.chrisbanes.photoview:library:1.2.3'
+    compile 'com.mcxiaoke.volley:library:1.0.+'
+    compile 'com.squareup.picasso:picasso:2.4.0'
     compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.3'
+    compile 'com.nineoldandroids:library:2.4.0'
 
     /*
     compile files('../external/googlemediaframework/libs/exoplayer.jar')
