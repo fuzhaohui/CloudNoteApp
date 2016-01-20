@@ -4,6 +4,13 @@ import android.content.Context;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
+
+import com.afollestad.silk.Silk;
+import com.afollestad.silk.utilities.IOUtils;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import ch.boye.httpclientandroidlib.HttpResponse;
 import ch.boye.httpclientandroidlib.client.HttpClient;
 import ch.boye.httpclientandroidlib.client.methods.HttpRequestBase;
@@ -14,12 +21,6 @@ import ch.boye.httpclientandroidlib.conn.scheme.SchemeRegistry;
 import ch.boye.httpclientandroidlib.conn.ssl.SSLSocketFactory;
 import ch.boye.httpclientandroidlib.impl.client.DefaultHttpClient;
 import ch.boye.httpclientandroidlib.impl.conn.PoolingClientConnectionManager;
-import com.afollestad.silk.Silk;
-import com.afollestad.silk.utilities.IOUtils;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.*;
 
 /**
  * @author Aidan Follestad (afollestad)

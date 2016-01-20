@@ -2,6 +2,7 @@ package com.afollestad.silk.adapters;
 
 import android.content.Context;
 import android.database.Cursor;
+
 import com.afollestad.silk.SilkComparable;
 import com.afollestad.silk.SilkCursorItem;
 

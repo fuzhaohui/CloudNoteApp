@@ -1,6 +1,7 @@
 package com.afollestad.cardsui;
 
 import android.graphics.drawable.Drawable;
+
 import com.afollestad.silk.SilkComparable;
 
 /**

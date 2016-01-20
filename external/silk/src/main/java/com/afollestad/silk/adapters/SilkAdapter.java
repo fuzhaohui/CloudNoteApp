@@ -6,9 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.BaseAdapter;
-import com.afollestad.silk.SilkComparable;
 
-import java.util.*;
+import com.afollestad.silk.SilkComparable;
 
 /**
  * A BaseAdapter wrapper that makes creating list adapters easier. Contains various convenience methods and handles

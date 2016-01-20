@@ -6,6 +6,7 @@ import android.widget.AbsListView;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ListAdapter;
+
 import com.afollestad.silk.adapters.ScrollStatePersister;
 import com.afollestad.silk.adapters.SilkAdapter;
 import com.afollestad.silk.adapters.SilkCursorAdapter;

@@ -15,13 +15,13 @@
  */
 package com.lightbox.android.photoprocessing.utils;
 
-import java.io.IOException;
-
 import android.app.Activity;
 import android.database.Cursor;
 import android.media.ExifInterface;
 import android.net.Uri;
 import android.provider.MediaStore;
+
+import java.io.IOException;
 
 /** 
  * MediaUtils 

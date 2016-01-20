@@ -4,10 +4,10 @@ import android.content.Context;
 import android.graphics.Rect;
 import android.text.TextUtils;
 import android.util.SparseIntArray;
-import android.view.*;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.TextView;
+
 import com.afollestad.silk.adapters.SilkAdapter;
 
 /**

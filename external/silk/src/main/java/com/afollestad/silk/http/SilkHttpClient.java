@@ -2,6 +2,7 @@ package com.afollestad.silk.http;
 
 import android.content.Context;
 import android.os.Handler;
+
 import ch.boye.httpclientandroidlib.client.methods.HttpDelete;
 import ch.boye.httpclientandroidlib.client.methods.HttpGet;
 import ch.boye.httpclientandroidlib.client.methods.HttpPost;

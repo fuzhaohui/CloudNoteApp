@@ -11,8 +11,9 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.TextView;
-import com.afollestad.silk.adapters.SilkCursorAdapter;
+
 import com.afollestad.silk.SilkCursorItem;
+import com.afollestad.silk.adapters.SilkCursorAdapter;
 
 /**
  * A {@link SilkCursorAdapter} that displays {@link com.afollestad.cardsui.Card} and {@link CardHeader} objects in a {@link CardListView}.

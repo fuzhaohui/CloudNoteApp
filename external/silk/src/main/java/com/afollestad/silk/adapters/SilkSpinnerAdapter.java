@@ -2,6 +2,7 @@ package com.afollestad.silk.adapters;
 
 import android.content.Context;
 import android.widget.ArrayAdapter;
+
 import com.afollestad.silk.R;
 
 /**

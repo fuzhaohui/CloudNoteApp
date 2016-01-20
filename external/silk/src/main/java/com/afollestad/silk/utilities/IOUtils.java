@@ -1,7 +1,5 @@
 package com.afollestad.silk.utilities;
 
-import java.io.*;
-
 /**
  * @author Aidan Follestad (afollestad)
  */

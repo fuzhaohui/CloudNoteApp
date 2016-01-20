@@ -1,5 +1,11 @@
 package com.afollestad.silk.http;
 
+import org.json.JSONObject;
+
+import java.io.InputStream;
+import java.io.Serializable;
+import java.util.List;
+
 import ch.boye.httpclientandroidlib.HttpEntity;
 import ch.boye.httpclientandroidlib.NameValuePair;
 import ch.boye.httpclientandroidlib.client.entity.UrlEncodedFormEntity;
@@ -7,11 +13,6 @@ import ch.boye.httpclientandroidlib.entity.ByteArrayEntity;
 import ch.boye.httpclientandroidlib.entity.InputStreamEntity;
 import ch.boye.httpclientandroidlib.entity.SerializableEntity;
 import ch.boye.httpclientandroidlib.entity.StringEntity;
-import org.json.JSONObject;
-
-import java.io.InputStream;
-import java.io.Serializable;
-import java.util.List;
 
 /**
  * Represents the content of a POST or PUT request.

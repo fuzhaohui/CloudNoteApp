@@ -1,9 +1,9 @@
 package com.afollestad.silk.http;
 
+import java.net.SocketTimeoutException;
+
 import ch.boye.httpclientandroidlib.HttpResponse;
 import ch.boye.httpclientandroidlib.StatusLine;
-
-import java.net.SocketTimeoutException;
 
 /**
  * @author Aidan Follestad (afollestad)

@@ -1,6 +1,7 @@
 package com.afollestad.silk.fragments.feed;
 
 import android.os.Bundle;
+
 import com.afollestad.silk.SilkComparable;
 import com.afollestad.silk.fragments.list.SilkListFragment;
 
