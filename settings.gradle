@@ -2,10 +2,10 @@ include ':app', ':external:library'
 
 //override your build tools version in gradle.properties
 if (!System.properties['buildToolsVersion']) {
-    System.properties['buildToolsVersion'] =  "21.1.2"
+    System.properties['buildToolsVersion'] =  "23.0.2"
 }
 
 if (!System.properties['androidGradlePluginVersion']) {
-    System.properties['androidGradlePluginVersion'] = "1.0.+"
+    System.properties['androidGradlePluginVersion'] = "1.5.0"
 }
 //project(':library').projectDir = new File('external/library')
